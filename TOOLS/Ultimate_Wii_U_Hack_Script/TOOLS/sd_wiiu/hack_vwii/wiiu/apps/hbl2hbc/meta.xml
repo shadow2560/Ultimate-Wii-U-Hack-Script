@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>HBL2HBC</name>
+  <coder>FIX94</coder>
+  <version>v1.1u1</version>
+  <url>https://github.com/FIX94/hbl2hbc</url>
+  <release_date>20170104200000</release_date>
+  <short_description>Boot from HBL to HBC or app</short_description>
+  <long_description>Boot to your vwii Homebrew Channel or
+
+  	add a config file hbl2hbc.txt where you can add TitleID=TileName lines to then choose from in a small menu if that config is on your sd card root, if no config is found it will just launch the homebrew channel by default like v1.0
+-if the config file provided only contains one title id boot that directly, no need to display a selection menu for that
+
+  	config
+  </long_description>
+  <category>tool</category>
+
+</app>

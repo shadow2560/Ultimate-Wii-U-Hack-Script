@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1.0">
+	<name>IOS236 Installer v8 MOD Special vWii Edition</name>
+	<version>v8 MOD vWii</version>
+	<release_date>201301161352</release_date>
+	<coder>Dr Clipper, ZRicky11, dmm, FIX94</coder>
+	<short_description>Installs IOS236</short_description>
+	<long_description>Installs a patched IOS36 into the IOS236 slot.</long_description>
+	<no_ios_reload/>
+</app>

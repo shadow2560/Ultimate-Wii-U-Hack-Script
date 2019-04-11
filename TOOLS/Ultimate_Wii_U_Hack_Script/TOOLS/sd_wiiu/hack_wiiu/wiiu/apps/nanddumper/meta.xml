@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>WiiU Nand Dumper</name>
+  <coder>koolkdev</coder>
+  <version>0.3</version>
+  <url>https://gbatemp.net/threads/nand-dumper-create-full-dumps-of-the-nand.465680/</url>
+  <release_date>20170294165302</release_date>
+  <short_description>Create Full Dumps of the NAND</short_description>
+  <long_description>This is a complete dumping, backuping too. It allows you to dump the NANDs, OTP and SEEPROM, per your selection.
+
+This is the first tool to dump the SLC and SLCCMPT properly, including the ECC the spare data. Other tools are missing those parts, so they aren't proper backups, and can't be flashed back with hardmod. But it can be fixed with the OTP and the tools that I released
+
+This homebrew dumps those things to the root of the SD, so make sure to have enough free space for your selection.
+Options:
+Dump SLC full and proper dump
+Dump SLCCMPT full and proper dump
+Dump MLC
+Dump OTP
+Dump SEEPROM
+  </long_description>
+  <category>tool</category>
+</app>

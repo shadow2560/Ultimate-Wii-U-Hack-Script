@@ -1,0 +1,43 @@
+
+Sharpii 1.7.2 - WAD - A tool by person66, using libWiiSharp.dll by leathl
+
+
+  Usage:
+
+       Sharpii.exe WAD [-p | -u | -e | -i] input output [arguments]
+
+
+  Arguments:
+
+       input          The input file/folder
+       output         The output file/folder
+       -p             Pack WAD
+       -u             Unpack WAD
+       -e             Edit WAD
+       -i             Get WAD info
+
+    Arguments for unpacking:
+
+         -cid           Use Content ID as name
+
+    Arguments for info:
+
+         -o [output]    Output info to text file
+         -titles        Display titles in all languages
+
+    Arguments for packing/editing:
+
+         -id [TitleID]  Change the 4-character title id
+         -ios [IOS]     Change the Startup IOS
+         -title [title] Change the Channel name/title.
+                        If there are spaces, surround in quotes
+         -f             Fakesign the WAD
+         -type [type]   Change the Channel type. Possible values are:
+                        Channel, DLC, GameChannel, HiddenChannels,
+                        SystemChannels, or SystemTitles
+         -sound [wad]   Use the sound from 'wad'
+         -banner [wad]  Use the banner from 'wad'
+         -icon [wad]    Use the icon from 'wad'
+         -dol [wad]     Use the dol from 'wad'
+                        NOTE: you can also just enter the path to a
+                        regular dol file, instead of a wad

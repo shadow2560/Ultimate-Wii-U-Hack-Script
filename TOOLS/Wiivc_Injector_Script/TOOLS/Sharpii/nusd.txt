@@ -1,0 +1,30 @@
+
+Sharpii 1.7.2 - NUSD - A tool by person66, using libWiiSharp.dll by leathl
+
+
+  Usage:
+
+       Sharpii.exe NUSD [-id titleID | -ios IOS] [-v version] [-o otput] [-all]
+                        [-wad] [-decrypt] [-encrypt] [-local] [-s content]
+
+
+  Arguments:
+
+       -id titleID    [required] The Title ID of the file you wish to download
+       -v version     [required] The version of the file you wish to download
+                      NOTE: Use 'latest' to get the latest version
+       -ios IOS       The IOS you wish to download. This is an alternative to
+                      '-id', use one or the other, but not both.
+       -o output      Folder to output the files to
+       -local         Use local files if present
+       -s content     Download a single content from the file
+                      NOTE: When using this, output MUST have a path and a
+                      filename. For current directory use '.\[filename]'
+       -all           Create and keep encrypted, decrypted, and WAD versions
+                      of the file you wish to download
+       -wad           Keep only the WAD version of the file you wish to
+                      download
+       -decrypt       Keep only the decrypted contents of the file you wish to
+                      download
+       -encrypt       Keep only the encrypted contents of the file you wish to
+                      download

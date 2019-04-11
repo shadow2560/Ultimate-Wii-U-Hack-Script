@@ -1,0 +1,207 @@
+2.2.6 modified v1.44:
+- Update "readme.txt".
+
+2.2.6 modified v1.43:
+- When the "LogHook.bat" file is launched (it's the starting script), the path is determined and the working dir is determined automaticaly. In facts, you can now create a shortcut from anywhere you want, the scripts will work properly.
+
+2.2.6 modified v1.42:
+- Correct indentation of the code of the scripts.
+- Update "readme.txt".
+
+2.2.6 modified v1.41:
+- Update "readme.txt".
+
+2.2.6 modified v1.39:
+- Add possibility to not scrub/trim Wii game during the script.
+- Some optimisations to the code.
+- New script added witch restore all values of the script to default. The script is like it is distribued in the zip file, except if you have added your own files in folders (except SOURCE_FILES folder witch is completely recreated).
+- Some minors modifications.
+- Update "readme.txt".
+
+2.2.6 modified v1.38:
+- Try to support Wii U parental control.
+- Bugs fixed.
+
+2.2.6 modified v1.37:
+- Bug fix with UTF-8 when trying to choose a path with some special characters with the GUI.
+
+2.2.6 modified v1.36:
+- Add possibility to use a forwarder of Nintendont to force only the Wii U Widescreen option to on and the Widescreen option to off. This type of configuration can be useful if the game use some cheats witch allow widescreen.
+- Smalls bugs fixed.
+
+2.2.6 modified v1.35:
+- All scripts are now integrated in the main launcher and are stored in "TOOLS\Storage" folder.
+- Modify all the scripts to be compatibles with the new integration.
+
+2.2.6 modified v1.34:
+- Add some new verifications for values entered by the user.
+- Bugs fixed in scripts and functions.
+
+2.2.6 modified v1.33:
+- Add verifications in the name of the save entered by the user in "save_configs.bat" script.
+- Bugs fixed in "restore_configs.bat" script.
+
+2.2.6 modified v1.32:
+- Use 7zip into the "save_configs.bat" script to create a  file containing all configs files backup (".wbcis" extension).
+- Add possibility to name the save and to choose the folder where it will be saved in the "save_configs.bat" script.
+- Create a "restore_configs.bat" script to restore a "wvcis" backup file create by the "save_configs.bat" script.
+- Bugs fixed in the Wiivc Injector Script.
+- Update "readme.txt".
+
+2.2.6 modified v1.31:
+- Add possibility to open a graphical interface to choose a file when entering "*" as path.
+- Others bugs fixed.
+
+2.2.6 modified v1.30:
+- Add support for the second line of the longname attribute for meta.xml. Now you can write the name of the game on two lines, witch can have 32 chars max for each one.
+- Some bugs fixed in new verifications of the script, in the script himself and in the functions called during it.
+
+2.2.6 modified v1.29B:
+- Add more verifications for values entered by the user.
+
+2.2.6 modified v1.28B:
+- Use UTF-8 encoding for and during the differents scripts.
+- Implement an alternative method if games path have some unsuported letters for Wit. It's not a realy good method and I don't like it because it takes time to copy the game and the error verifications could take too mutch time compared to before but it's the only solution that I have found for now. Note that the "(" and the ")" characters always make the script exit with an error.
+- Fix bug if "(" or ")" are entered in the differents path.
+- Convert the Wii U Title Id to upper case if it is entered manualy.
+- Fix bugs in the blacklist function of the Wiivc Injector Script and in the "blacklist_wiiu_instaled_titles.bat" script.
+- Others minors bugs fix.
+
+2.2.6 modified v1.27B:
+- Use "convert.exe" of ImageMagick program to convert images during the first part of the script. This take mutch more space than Tga2png but it convert many more file type.
+- Add possibility to use all format of images witch could be convert with ImageMagick. If you use the script with the method of copying some files in the "SOURCE_FILES" folder, you just have to respect the filename of the images (bootTvTex, iconTex, bootDrcTex and bootLogoTex) but you can use any extentions that you want (.jpg, .tga, .pdf, .tif, ...).
+- Remake source game deletion.
+- Remake cleanup files at the end of the script.
+- Remove Tga2png cause it's not used anymore during the script.
+- Update "readme.txt" file.
+- Some other bugs fix.
+
+2.2.6 modified v1.26B:
+- Add possibility to define path of each files used during the script (game, images, bootsound, custom main.dol for Gamecube injection and cheats for Wii injection). If you could, try to not use dirrectories/files name witch have accents or special chars into them, especialy for Wii games because Wit don't like it ("+, -, [, ], _, (, ), space" are authorised). Note that the script could also be used as before, only path of eventual missing files in the SOURCE_FILES folder will be asked if you choose to enter sources manualy (except game file) and all of them could be empty.
+- Add more verifications to delete some files at the end of the script.
+- Some other bugs fix.
+
+2.2.6 modified v1.25:
+- Add suport of cheats injection for Wii games, you need a "game.gct" file into the "SOURCE_FILES" dirrectory. Note that this function is not stable and could cause the game to not function properly. The cheats couldn't be disabled on the created channel with this method of injection.
+- Update "readme.txt" file.
+
+2.2.6 modified v1.24:
+- If repacking an Wii iso with Wit fail the first time, an other method is tried. With this, even if the iso is in fact a ciso or an other type of Wii game format (except multi wbfs files), the convertion should work.
+- Move instructions for sources game deleting after Wit succesfuly repack the iso.
+
+2.2.6 modified v1.23:
+- The "bootTvTex.png" and "iconTex.png" are not anymore required files in the "SOURCE_FILES" dirrectory, they are now optionals. If they are not present, a generic image will be copied from "TOOLS\templates".
+- Add possibility to download images of the game you want to inject via cucholix repository, see https://github.com/cucholix/wiivc-bis/tree/master/ to have more informations. The images are downloaded in the "SOURCE_FILES" dirrectory and are cleaned at the end of the script.
+- Add a bootsound for Gamecube games and for the Nintendont auto-injection. The bootsound comes from cucholix repository and is located at "TOOLS\templates\GC_bootSound.wav".
+- Title ID are now extracted via Wit for Gamecube and Wii games files.
+- The Gamecube games can now be named "game.iso" because the script takes care of verifications for the type of game you try to inject and it's not all based on the name of gamefiles now. The second disc can also be named "disc2.iso". You can also name the first "game.iso" and the second "disc2.gcm" or the first one "game.gcm" and the second "disc2.iso", it haven't any impact from now because the script will change the extention of them to gcm.
+- Changed how the script clean up files at the end of the convertion.
+- Changed how the script terminate in case of errors. Now the temp files are cleaned when the script exit.
+- Add some new verifications and some new errors messages.
+- Fixed a bug causing a wad modified by GetExtTypePatcher was deleted if the choose of deleting game source files was made. Now, the wad modified is saved correctly.
+- Update "readme.txt" file.
+- Some others minors changes and bugs fix.
+
+2.2.6 modified v1.22:
+- Remake the script "blacklist_wiiu_instaled_titles.bat", there is no need to copy manualy the ids found by the script in the blacklist file of the Wiivc Injector Script manualy. Also, you could enter the IP adress of the Wii U without python file modifications.
+- Add creation of the blacklist file if it not exists when the injection script begin.
+- Bug fixed in GetExtTypePatcher instructions for Wii games.
+- Implement injection of new formats of Wii disc type (.wdf, .wia, .ciso, .wbi). The name of the file should be, for example, "game.ciso" for ciso files (same apply for other format, only the file extension should be changed like "game.wia" for wia files, see the "readme.txt" file).
+- You can now choose to use or not to use the Gamepad for all type of injections.
+- Update "readme.txt" file.
+
+2.2.6 modified v1.21 Beta:
+- Add exit commande to the wupclient python script call in "blacklist_wiiu_instaled_titles.bat".
+
+2.2.6 modified v1.20 Beta:
+- Create a new script named "blacklist_wiiu_instaled_titles.bat" witch use "Wupclient" to discover the title that you have already installed on your Wii U (you need Python 2.7.14 to be installed on your computer (remember to add it to your path during installation), you need Mocha to be launched before trying the script, Haxchi CFW and CBHC doesn't work but you can launch Mocha after launching them with no problem and you need also to edit the line number 29 of the file "TOOLS\Wupclient\wupclient.py" to tell your console IP to the program (to know your console IP, you could launch Ftpiiu witch will display your IP adress)). A file "ids_list.txt" is created and the content of this file could be copy/paste to the blacklist file in "TOOLS\Storage\" and named "blacklist_ids.txt".
+- Update readme.txt.
+
+2.2.6 modified v1.19 Beta:
+- Add blacklist of the IDs witch have been succesfuly be converted in a txt file in "TOOLS\Storage" folder and named "blacklist_ids.txt".
+- Modify the script to use the blacklist IDs files.
+- Rename the "save_keys.bat" script file to "save_configs.bat".
+- Add the blacklist file to the save_configs script.
+- Change the config file creation in the script and in the "del_default_choices.bat" script file. Now the file will be empty.
+
+2.2.6 modified v1.18 Beta:
+- Fixed a bug witch caused manual creation of Wiivc Chan Booter channel was always the OHBC channel, even if an other ID was entred.
+- Add verifications for some variables. For example, only the first letter is saved when a question require a Y/N answer.
+
+2.2.6 modified v1.17 Beta:
+- Add possibility to open the Gbatemp wiki for Wii game injection compatibility list.
+- Add possibility to open the Gbatemp tread witch contain templates images and bootsound for the script.
+- Add a new file witch can record some choices made during the script to never display some messages again.
+- Add some new messages during the script.
+- Add a new script named "del_default_choices.bat" to delete the records in the new file witch record the choices.
+- Add backup of the new file witch record the choices to the "save_keys.bat" script.
+
+2.2.6 modified v1.16 Beta:
+- Add new Nfs2iso2nfs from FIX94 witch correct some bug with ZL/ZR swap.
+- Rewrite the script for the new version of Nfs2iso2nfs wiimote patch.
+- Update Readme.txt file.
+
+2.2.6 modified v1.15 Beta:
+- Completly Rewrite GetExtTypePatcher tests for game.wad file. It's slower than the old method but now, it should patch any wad witch could be patched.
+- The script could easily create Nintendont forwarder channel if you don't put any game in the SOURCE_FILES dirrectory. 
+- Update readme.txt.
+
+2.2.6 modified v1.14 Beta:
+- Add more verification and mor messages for wad patching with GetExtTypePatcher.
+
+2.2.6 modified v1.13 Beta:
+- use "windir" system variable instead of full path for Windows related tools (robocopy, Ping...).
+- Some corrections of bugs initiated with the 1.12 Beta.
+- Start trying to include results of GetExtTypePatcher into the general log, doesn't work for now.
+
+2.2.6 modified v1.12 Beta:
+- Add trucha sign (fake sign) when repacking "wad" file with Sharpii if GetExtTypePatcher is used.
+- Add new verifications to know when GetExtTypePatcher patch or not the game. If the patch has worked, some messages will be displayed at the end of the script.
+- Some new log messages are created during the script.
+- A new log file is created during the script for GetExtTypePatcher results.
+
+2.2.6 modified v1.11 Beta:
+- Modified message for "passthrough" patch to explain when use it or not if Wiivc_Chan_Booter is created.
+- Corrected bug with adding "passthrough" patch with "game.wad".
+
+2.2.6 modified v1.10 Beta:
+- reverse a change made in 1.8 Beta. It's not a real bug but the display of the windows title was impacted.
+
+2.2.6 modified v1.9 Beta:
+- Bug fix for wad injection.
+
+2.2.6 modified v1.8 Beta:
+- French translation of  the script.
+- Deleting an unuseful line.
+
+2.2.6 modified v1.7Beta:
+- Determining Wii Title ID for wbfs games during the script.
+- Rewriting some Wii_Chan_Booter instructions.
+- Optimizing wbfs injection. Move instruction to delete "game.iso" generated during the script after iso extraction cause it's not useful after that and takes lot of disc space for nothing.
+
+2.2.6 modified v1.6:
+- Add more clean up when the script start.
+- Add possibility to patch video mode with Wii-vmc during the script, useful for game witch have black screen caused by launching a Wii pal game on NTSC console and game ntsc launched on pal console. Note that all games don't need these patches, do it only if you've got a game that don't work without the patches.
+- Update readme.txt.
+
+2.2.6 modified v1.5:
+- Wad preparation for GetExtTypePatcher fixed.
+- Officialy based on Wiivc Injector Script 2.2.6.
+
+2.2.5 modified V1.4:
+- Add possibility to not patch a "game.wad" file with GetExtTypePatcher. This could be useful to create a Wiivc_Chan_Booter without entering Wii Title ID cause the script will use the one in "game.wad" file.
+- Fixing some wad functions.
+- Some others minor improvements.
+
+2.2.5 modified V1.3:
+- Add more files clean up when the script start.
+- Add possibility for the user to remove SOURCE_FILES dirrectory game during the script.
+- Add possibility to choose new Nfs2iso2nfs patches from FIX94.
+- Add GetExtTypePatcher.exe and support for it in scilent mode into the script, for Wii games iso or wbfs only.
+- Rewriting some little things in the script to optimize some instructions. It's also possible to use some more patches for homebrews now.
+- Implementing Wiivc Chan Booter of FIX94 to boot v-wii nand wad installed title. This could be made if you don't have any game in the SOURCE_FILES folder (base images are always required).
+- Add script "save keys.bat" to save configuration files and Jnus_tool game download into a folder named "KEY_SAVES". If an update of the script is relised, you only need to copy the content of "KEY_SAVES" folder into the new relise of the script. This is very limited but if nothing change about keys or game files used during the script, you could use this to have a configured script easily.
+- Add some Gnu_win32 tools.
+- Implement patching wad with GetExtTypePatcher. The wad must be named "game.wad" and should be placed in the SOURCE_FILES dirrectory. A Wiivc Chan Booter channel is also created. Note that if you install the new wad on your v-wii nand, the game couldn't be played with Wiimotes.
+- Update C2w_Patcher to v1.2.
+- Add possibility to use the new option "-iop2x" in C2w_Patcher. Do this if you know what your doing.

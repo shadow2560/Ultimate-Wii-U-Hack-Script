@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>Wuphax</name>
+  <coder>FIX94</coder>
+  <version>1.1u3</version>
+  <url>https://github.com/FIX94/wuphax/releases</url>
+  <release_date>20161128200000</release_date>
+  <short_description>Hacking vWii from WiiU Mode</short_description>
+  <long_description>So this is something I wrote today which may be helpful to people who dont have a required game to hack vwii.
+
+UPDATE: this update is one month after the initial release of v1.0, this is much simpler to do now with v1.1!
+Grab the current elf release from the releases tab.
+Download the hackmii installer and put only the boot.elf from that zip on your sd card root.
+Make sure to unplug any and all usb devices before following any of these steps.
+Put the wuphax.elf into your wiiu/apps folder on your sd card and run it in homebrew launcher.
+Press A to back up your current mii channel and inject it with wuphax.
+After the wiiu restarted, go into wii mode and run mii channel, install homebrew channel from there.
+To restore the mii channel just run the elf again and press B this time.
+  </long_description>
+  <category>tool</category>
+
+</app>

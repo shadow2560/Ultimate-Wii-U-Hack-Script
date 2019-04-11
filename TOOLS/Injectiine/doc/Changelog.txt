@@ -1,0 +1,91 @@
+V1.23 Modified FR V1.5 (14/01/18)
+- If the images files in the "Files" folders are not in "png" format, all the scripts will convert them into it. Now the "MetaVerify" script is not needed anymore and it was removed.
+- The question to pack the game or not is asked before the injecting process in all scripts.
+
+V1.23 Modified FR V1.4 (12/01/18)
+- Added base download with a custom Title ID and Title Key for all injections type. Be careful with this, no verifications are made and the scripts or injections could bug easily if bad informations are provided.
+- The product code of the base used is automaticaly determined by using the "cos.xml" file for NES and SNES injection.
+- The rom/ini name is automaticaly set, based on the rom name of the base, for the N64 injection. You can always provide your own name if you want. If the base doesn't contain a rom, you must set a name.
+- Made some modification in the N64 script for INIs's files, now an INI file witch is present in a base and witch is not present in the "INIs" folder is copied into the "INIs" folder.
+- Added "INIs" folder in the save configuration script.
+- Tried to fix creation of a blank ini file in N64 injection.
+- Some other bugs fixed.
+
+V1.23 Modified FR V1.3 (06/01/18)
+- Fixed a bug when entering the Wii U Common Key in NDS script injection.
+- Fixed a bug in the Save Configuration script.
+
+V1.23 Modified FR V1.2 (03/01/18)
+- Fixed an other bug in GBA injection.
+
+V1.23 Modified FR V1.1 (24/12/17)
+- Add blacklist functions, save and restore functions and restore to default function.
+- Bugs fixed in keys verifications.
+- Some other bugs fixed.
+
+V1.23 Modified FR V1.0 (24/12/17)
+- Added the "cd" command to initialize the path of the script to the "Loader.bat" script.
+- Del "RUN.bat" script because it's unusful now.
+- Fixed GBA injection.
+- Converting Python scripts to standard application ".exe", Python doesn't need to be installed anymore (all the consoles script have been updated to reflect this change).
+- French translation.
+- Create a "preload.bat" witch display a warning for the user to prevent a bad font use during the script.
+- All scripts are now in UTF-8.
+- Add files and folders selection with GUI if the user want to use it. The old manual copy process in the "Files" dirrectory always work and file selection is not asked if corresponding file is found in the "Files" folder.
+- With the files GUI selections, all images type can be used because it will be converted to PNG automaticaly.
+- Fixed some bugs in N64 script.
+- Maybe some other modifications.
+
+v1.23 (18/12/17)
+-Added option to use custom backgrounds for GamePad/TV (NDS only)
+-Added custom bootLogoTex support
+-Revamped readme.txt
+
+v1.22 (17/12/17)
+-Added option to use config .ini from Files directory (N64 only)
+-Updated readme.txt
+
+v1.21 (13/12/17)
+-Updated Loadiine compiling process
+-Added option to use decrypted NES base from Files directory. All consoles available now support offline injection.
+-Added Duck Hunt [EUR] as NES base (supports emulation of the NES Zapper via Wii Remote)
+-Fixed offline SNES base injection
+-Fixed offline NDS base injection
+-Added fnr.exe automatic deletion which fixed bug where generated output folder was empty (NDS only)
+-Updated readme.txt
+-Updated changelog.txt
+
+v1.2 (11/12/17)
+-Updated readme.txt
+-Added Super Mario Kart [EUR], Earthbound [EUR] and Kirby's Dream Land 3 [EUR] as SNES bases
+-Added option to use decrypted SNES base from Files directory
+-Added option to use decrypted NDS base from Files directory
+-Fixed bugs when compiling game in Loadiine format
+-Added Loadiine error when Loadiine (GX2) game package fails
+-Fixed missing NDS.bat file, I guess I was in a rush and forgot to pack it in the archive
+-Some other bug fixes and tinkings
+
+v1.1 (10/12/17)
+-Added working Game Boy Advance support by fixing a meta.xml creation bug which corrupted GBA injects
+-Added Mario & Luigi: Superstar Saga [EUR] as GBA base
+-Added option to use decrypted GBA base from Files directory
+-Fixed bug in GBA meta.xml creation which added a space to game name line #1 when using multilines
+-Removed corruption warning when starting GBA injector
+-Added support for custom bootSounds!
+-Added option to pack in either WUPInstaller format or Loadiine (GX2) format
+-Renamed About.txt to readme.txt and added changelog text document
+-Tinkered About.txt/Readme.txt a little
+-Fixed a little bug when Injectiine prompts to use custom INI/ROM name or copy from base (N64 only)
+-Removed Tool64 from N64 injector because it is not needed anymore
+-Updated shortcut
+-Some other bug fixes and tinkings
+
+v1.01 (9/12/17)
+-Added N64 converter which automatically converts *.n64 and *.v64 ROMs
+-Added option to use decrypted base from Files directory (N64 only)
+-Added option to define custom INI/ROM name (N64 only)
+-Added UseTimer prompt when defining custom INI options (N64 only)
+-Updated About.txt file
+
+v1.0 (8/12/17)
+Initial release

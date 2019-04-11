@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>CBHC</name>
+  <coder>FIX94</coder>
+  <version>1.6</version>
+  <url>https://github.com/FIX94/haxchi</url>
+  <release_date>20161223200000</release_date>
+  <category>tool</category>
+  <short_description>Coldboot Haxchi Installer</short_description>
+  <long_description>WARNING! This will install Coldboot Haxchi on your system.
+ONLY USE THIS IF YOU ARE WILLING TO TAKE A RISK OF BRICKING YOUR CONSOLE.
+
+Proper use of this app should have a sd:\cbhc folder on your SD card, containing themeable assets. Without this, the DS VC game will still look like a VC game. You can get the folder at the github release page: github.com/FIX94/haxchi/releases
+  </long_description>
+</app>

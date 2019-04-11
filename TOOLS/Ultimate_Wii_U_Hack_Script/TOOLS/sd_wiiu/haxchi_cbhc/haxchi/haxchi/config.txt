@@ -1,0 +1,17 @@
+a=wiiu/apps/mocha/mocha.elf
+b=wiiu/apps/homebrew_launcher/homebrew_launcher.elf
+x=
+y=
+l=
+r=
+zl=
+zr=
+plus=
+minus=
+home=
+up=
+down=
+left=
+right=
+sync=
+default=sysmenu

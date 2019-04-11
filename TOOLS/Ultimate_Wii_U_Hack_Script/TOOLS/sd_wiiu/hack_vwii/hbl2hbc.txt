@@ -1,0 +1,10 @@
+LULZ=Homebrew Channel
+OHBC=Open Homebrew Channel
+WWND=Nintendont
+UNEO=USB Loader GX
+UCXF=CFG USB Loader
+DWFA=WiiFlow
+ACEU=FCEU GX
+VBGX=VisualBoy Advance GX
+SNGX=Snes9x GX
+SGPG2=Genesis Plus GX
