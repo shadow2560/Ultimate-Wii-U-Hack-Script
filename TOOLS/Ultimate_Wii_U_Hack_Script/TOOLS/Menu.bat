@@ -67,47 +67,55 @@ goto:end_script
 :prepare_sd_script
 set action_choice=
 echo.
+cls
 call TOOLS\prepare_sd_wii_u.bat > %gen_log_path%\log.txt 2>&1
 @echo off
 goto:define_action_choice
 :launch_web_exploit_script
 set action_choice=
 echo.
+cls
 call TOOLS\web_exploit.bat
 @echo off
 goto:define_action_choice
 :install_required_script
 set action_choice=
 echo.
+cls
 call TOOLS\install_required.bat
 @echo off
 goto:define_action_choice
 :unbrick_v-wii
 set action_choice=
 echo.
+cls
 call TOOLS\menu_v-wii_unbrick.bat
 @echo off
 goto:define_action_choice
 :stop_update
 set action_choice=
 echo.
+cls
 call TOOLS\stop_update.bat
 @echo off
 goto:define_action_choice
 :restaure_update
 set action_choice=
 echo.
+cls
 call TOOLS\restaure_update.bat
 @echo off
 goto:define_action_choice
 :merge_mlc
 set action_choice=
+cls
 call TOOLS\merge_mlc.bat
 @echo off
 echo.
 goto:define_action_choice
 :extract_mlc
 set action_choice=
+cls
 call TOOLS\extract_mlc.bat
 @echo off
 echo.
@@ -115,6 +123,7 @@ goto:define_action_choice
 :launch_doc
 set action_choice=
 echo.
+cls
 IF "%uwuhs_launch%"=="Y" (
 	start ..\..\DOC\index.html
 ) else (

@@ -54,30 +54,35 @@ IF "%action_choice%"=="5" goto:restore_default_all
 goto:end_script
 :inject_script
 echo.
+cls
 call Console_select.bat > %gen_log_path%\log.txt 2>&1
 @echo off
 set action_choice=
 goto:define_action_choice
 :save_script
 echo.
+cls
 call save_configs.bat > %gen_log_path%\log.txt 2>&1
 @echo off
 set action_choice=
 goto:define_action_choice
 :restore_script
 echo.
+cls
 call restore_configs.bat > %gen_log_path%\log.txt 2>&1
 @echo off
 set action_choice=
 goto:define_action_choice
 :blacklist_script
 echo.
+cls
 call blacklist_wiiu_instaled_titles.bat > %gen_log_path%\log.txt 2>&1
 @echo off
 set action_choice=
 goto:define_action_choice
 :restore_default_all
 echo.
+cls
 call restore_default_all.bat
 @echo off
 set action_choice=

@@ -26,22 +26,26 @@ IF "%action_choice%"=="3" goto:others
 goto:end_script
 :wiivc_injector
 echo.
+cls
 call Wiivc_Injector_Script\TOOLS\Storage\Menu.bat
 set action_choice=
 goto:define_action_choice
 :injectiine
 echo.
+cls
 call Injectiine\TOOLS\Menu.bat
 set action_choice=
 goto:define_action_choice
 :others
 echo.
+cls
 call Ultimate_Wii_U_Hack_Script\TOOLS\Menu.bat
 set action_choice=
 goto:define_action_choice
 :launch_doc
 set action_choice=
 echo.
+cls
 start ..\DOC\index.html
 goto:define_action_choice
 :end_script

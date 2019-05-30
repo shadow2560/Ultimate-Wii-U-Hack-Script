@@ -39,36 +39,42 @@ goto:end_script
 :save_v-wii
 set action_choice=
 echo.
+cls
 call TOOLS\v-wii_unbrick_script\save_v-wii_important_folders.bat
 @echo off
 goto:define_action_choice
 :restaure_v-wii
 set action_choice=
 echo.
+cls
 call TOOLS\v-wii_unbrick_script\restaure_v-wii_important_folders.bat
 @echo off
 goto:define_action_choice
 :restaure_permissions
 set action_choice=
 echo.
+cls
 call TOOLS\v-wii_unbrick_script\restaure_permissions.bat
 @echo off
 goto:define_action_choice
 :save_title
 set action_choice=
 echo.
+cls
 call TOOLS\v-wii_unbrick_script\del_v-wii_title.bat
 @echo off
 goto:define_action_choice
 :restaure_title
 set action_choice=
 echo.
+cls
 call TOOLS\v-wii_unbrick_script\restaure_v-wii_title.bat
 @echo off
 goto:define_action_choice
 :launch_doc
 set action_choice=
 echo.
+cls
 IF "%uwuhs_launch%"=="Y" (
 	start ..\..\DOC\files\unbrick_v-wii.html
 ) else (

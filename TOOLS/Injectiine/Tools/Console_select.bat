@@ -4,16 +4,17 @@ setlocal
 chcp 65001 >nul
 title Injectiine
 :Menu
-cls
-echo ::::::::::::::::::::::::: >con
-echo ::Bienvenue dans Injectiine:: >con
-echo ::::::::::::::::::::::::: >con
-echo.>con
 ::Check for Java 8
 set jver=0
 for /f tokens^=2-5^ delims^=.-_^" %%j in ('java -fullversion 2^>^&1') do set "jver=%%j%%k%%l%%m"
 if %jver% LSS 180000 goto:javafail
 :define_action_choice
+cls
+title Injectiine
+echo ::::::::::::::::::::::::: >con
+echo ::Bienvenue dans Injectiine:: >con
+echo ::::::::::::::::::::::::: >con
+echo.>con
 echo Sélectionnez une console: >con
 echo 1: NES? >con
 echo 2: SNES? >con

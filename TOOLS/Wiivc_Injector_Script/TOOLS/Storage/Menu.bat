@@ -58,45 +58,45 @@ IF "%action_choice%"=="6" goto:restore_default_all
 goto:end_script
 :inject_script
 echo.
+cls
 call TOOLS\Storage\WiiInjectScript.bat > %gen_log_path%\log.txt 2>&1
 @echo off
 set action_choice=
-echo.
 goto:define_action_choice
 :save_script
 echo.
+cls
 call TOOLS\Storage\save_configs.bat > %gen_log_path%\log.txt 2>&1
 @echo off
 set action_choice=
-echo.
 goto:define_action_choice
 :restore_script
 echo.
+cls
 call TOOLS\Storage\restore_configs.bat > %gen_log_path%\log.txt 2>&1
 @echo off
 set action_choice=
-echo.
 goto:define_action_choice
 :default_script
 echo.
+cls
 call TOOLS\Storage\del_default_choices.bat > %gen_log_path%\log.txt 2>&1
 @echo off
 set action_choice=
-echo.
 goto:define_action_choice
 :blacklist_script
 echo.
+cls
 call TOOLS\Storage\blacklist_wiiu_instaled_titles.bat > %gen_log_path%\log.txt 2>&1
 @echo off
 set action_choice=
-echo.
 goto:define_action_choice
 :restore_default_all
 echo.
+cls
 call TOOLS\Storage\restore_default_all.bat
 @echo off
 set action_choice=
-echo.
 goto:define_action_choice
 :write_error
 pause
