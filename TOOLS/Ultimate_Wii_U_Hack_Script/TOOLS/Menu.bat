@@ -43,6 +43,8 @@ echo 7: Merger les fichiers créés par Wii U Nand Dumper en un seul fichier de 
 echo.
 echo 8: Extraire les fichiers du dump complet de la partition MLC?
 echo.
+echo 9: Ouvrir la page permettant de me faire une donation?
+echo.
 echo 0: Lancer la documentation (recommandé)?
 echo.
 IF "%uwuhs_launch%"=="Y" (
@@ -50,7 +52,6 @@ IF "%uwuhs_launch%"=="Y" (
 ) else (
 	echo N'importe quelle autre lettre: Quitter sans rien faire?
 )
-echo.
 echo.
 set /p action_choice=Entrez le numéro correspondant à l'action à faire: 
 IF "%action_choice%"=="1" goto:prepare_sd_script
@@ -62,6 +63,12 @@ IF "%action_choice%"=="6" goto:restaure_update
 IF "%action_choice%"=="7" goto:merge_mlc
 IF "%action_choice%"=="8" goto:extract_mlc
 IF "%action_choice%"=="0" goto:launch_doc
+IF "%action_choice%"=="9" (
+	set action_choice=
+	cls
+	start https://www.paypal.me/shadow256
+	goto:define_action_choice
+)
 goto:end_script
 
 :prepare_sd_script

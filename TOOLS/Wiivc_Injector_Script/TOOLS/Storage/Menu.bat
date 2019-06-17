@@ -41,12 +41,13 @@ echo une Wii U connectée sur le réseau local avec Mocha de lancé avec les par
 echo.
 echo 6: Restaurer toutes les valeurs par défaut (dossier SOURCE_FILES, blacklist, clés, fichiers téléchargé par Jnustool et configurations)?
 echo.
+echo 7: Ouvrir la page permettant de me faire une donation?
+echo.
 IF "%uwuhs_launch%"=="Y" (
 	echo N'importe quelle autre lettre: Revenir au menu précédent?
 ) else (
 	echo N'importe quelle autre lettre: Quitter sans rien faire?
 )
-echo.
 echo.
 set /p action_choice=Entrez le numéro correspondant à l'action à faire: 
 IF "%action_choice%"=="1" goto:inject_script
@@ -55,6 +56,12 @@ IF "%action_choice%"=="3" goto:restore_script
 IF "%action_choice%"=="4" goto:default_script
 IF "%action_choice%"=="5" goto:blacklist_script
 IF "%action_choice%"=="6" goto:restore_default_all
+IF "%action_choice%"=="7" (
+	set action_choice=
+	cls
+	start https://www.paypal.me/shadow256
+	goto:define_action_choice
+)
 goto:end_script
 :inject_script
 echo.
