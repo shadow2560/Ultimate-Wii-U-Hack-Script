@@ -1,3 +1,5 @@
+V1.23 Modified FR V1.6 (29/06/19)
+- Bugs fix release.
 V1.23 Modified FR V1.5 (14/01/18)
 - If the images files in the "Files" folders are not in "png" format, all the scripts will convert them into it. Now the "MetaVerify" script is not needed anymore and it was removed.
 - The question to pack the game or not is asked before the injecting process in all scripts.

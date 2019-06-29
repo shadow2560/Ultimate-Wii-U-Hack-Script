@@ -9,6 +9,7 @@ set jver=0
 for /f tokens^=2-5^ delims^=.-_^" %%j in ('java -fullversion 2^>^&1') do set "jver=%%j%%k%%l%%m"
 if %jver% LSS 180000 goto:javafail
 :define_action_choice
+cd /d "%script_path%"
 cls
 title Injectiine
 echo ::::::::::::::::::::::::: >con
