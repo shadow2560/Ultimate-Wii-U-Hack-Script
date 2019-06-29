@@ -1827,16 +1827,24 @@ IF /i "%nocc%"=="o" set nfspatch=%nfspatch% -nocc
 ::nfs2iso2nfs - Convert the prepared ISO to NFS files
 echo Convertion NFS avec Nfs2iso2nfs...>con
 cd WORKINGDIR\content
-IF "%gamefile%"=="game.gcm" ..\..\TOOLS\Storage\nfs2iso2nfs.exe -enc -homebrew -passthrough -iso "..\..\ISOBUILDTEMP\game.iso"
+IF "%gamefile%"=="game.gcm" (
+	..\..\TOOLS\Storage\nfs2iso2nfs.exe -enc -homebrew -passthrough -iso "..\..\ISOBUILDTEMP\game.iso"
+	goto:skip_nfs2iso2nfs
+)
 IF "%gamefile%"=="boot.dol" (
 	IF /i "%createnintendontchannel%"=="o" (
 		..\..\TOOLS\Storage\nfs2iso2nfs.exe -enc -homebrew -passthrough -iso "..\..\ISOBUILDTEMP\game.iso"
 	) else (
 		..\..\TOOLS\Storage\nfs2iso2nfs.exe -enc -homebrew%passpatch%%nfspatch% -iso "..\..\ISOBUILDTEMP\game.iso"
 	)
+	goto:skip_nfs2iso2nfs
 )
-IF "%gamefile%"=="game.wad" ..\..\TOOLS\Storage\nfs2iso2nfs.exe -enc -homebrew%passpatch%%nfspatch% -iso "..\..\ISOBUILDTEMP\game.iso"
-IF "%gamefile%"=="game.iso" ..\..\TOOLS\Storage\nfs2iso2nfs.exe -enc%nfspatch% -iso "..\..\ISOBUILDTEMP\game.iso"
+IF "%gamefile%"=="game.wad" (
+	..\..\TOOLS\Storage\nfs2iso2nfs.exe -enc -homebrew%passpatch%%nfspatch% -iso "..\..\ISOBUILDTEMP\game.iso"
+	goto:skip_nfs2iso2nfs
+)
+..\..\TOOLS\Storage\nfs2iso2nfs.exe -enc%nfspatch% -iso "..\..\ISOBUILDTEMP\game.iso"
+:skip_nfs2iso2nfs
 rmdir /s /q ..\..\ISOBUILDTEMP
 IF NOT EXIST hif_000000.nfs goto:nfsfail
 cd ..\..\
