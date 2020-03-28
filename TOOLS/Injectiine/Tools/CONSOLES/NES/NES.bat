@@ -140,6 +140,7 @@ IF EXIST TitleKeyPO.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour Punch-Out!! (EUR): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeyPO.txt
 set /p TITLEKEY=<TitleKeyPO.txt
 cls
@@ -161,6 +162,7 @@ IF EXIST TitleKeyDH.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour Duck Hunt (EUR): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeyDH.txt
 set /p TITLEKEY=<TitleKeyDH.txt
 cls
@@ -207,6 +209,7 @@ IF "%BASEDECIDE%"=="4" (
 cd NUSPacker
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 set /p COMMON=Entrez la Wii U Common Key: >con
+call "..\..\..\functions\CONV_VAR_to_MAJ.bat" "COMMON"
 echo %COMMON:~0,32%>encryptKeyWith
 set /p COMMON=<encryptKeyWith
 cls

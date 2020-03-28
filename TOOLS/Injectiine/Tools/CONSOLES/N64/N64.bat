@@ -143,6 +143,7 @@ IF EXIST TitleKeyDK.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour Donkey Kong 64 (EUR): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeyDK.txt
 set /p TITLEKEY=<TitleKeyDK.txt
 cls
@@ -165,6 +166,7 @@ IF EXIST TitleKeyEB.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour Excitebike 64 (USA): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeyEB.txt
 set /p TITLEKEY=<TitleKeyEB.txt
 cls
@@ -206,6 +208,7 @@ IF "%BASEDECIDE%"=="4" (
 cd NUSPacker
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 set /p COMMON=Entrez la Wii U Common Key: >con
+call "..\..\..\functions\CONV_VAR_to_MAJ.bat" "COMMON"
 echo %COMMON:~0,32%>encryptKeyWith
 set /p COMMON=<encryptKeyWith
 cls

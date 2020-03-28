@@ -158,6 +158,7 @@ IF EXIST TitleKeySM.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour Super Metroid (EUR): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeySM.txt
 set /p TITLEKEY=<TitleKeySM.txt
 cls
@@ -178,6 +179,7 @@ IF EXIST TitleKeyDKC.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour Donkey Kong Country (EUR): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeyDKC.txt
 set /p TITLEKEY=<TitleKeyDKC.txt
 cls
@@ -198,6 +200,7 @@ IF EXIST TitleKeyKDL3.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour Kirby's Dream Land 3 (EUR): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeyKDL3.txt
 set /p TITLEKEY=<TitleKeyKDL3.txt
 cls
@@ -218,6 +221,7 @@ IF EXIST TitleKeySMK.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour Super Mario Kart (EUR): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeySMK.txt
 set /p TITLEKEY=<TitleKeySMK.txt
 cls
@@ -238,6 +242,7 @@ IF EXIST TitleKeyEB.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour Earthbound (EUR): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeyEB.txt
 set /p TITLEKEY=<TitleKeyEB.txt
 cls
@@ -300,6 +305,7 @@ IF "%BASEDECIDE%"=="7" (
 cd NUSPacker
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 set /p COMMON=Entrez la Wii U Common Key: >con
+call "..\..\..\functions\CONV_VAR_to_MAJ.bat" "COMMON"
 echo %COMMON:~0,32%>encryptKeyWith
 set /p COMMON=<encryptKeyWith
 cls

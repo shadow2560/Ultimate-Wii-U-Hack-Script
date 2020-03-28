@@ -263,6 +263,7 @@ IF EXIST TitleKeyBA.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour Brain Age (USA): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeyBA.txt
 set /p TITLEKEY=<TitleKeyBA.txt
 cls
@@ -284,6 +285,7 @@ IF EXIST TitleKeyBT.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour Brain Training (EUR): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeyBT.txt
 set /p TITLEKEY=<TitleKeyBT.txt
 cls
@@ -307,6 +309,7 @@ IF EXIST TitleKeyKSS.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour Kirby Squeak Squad (USA): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeyKSS.txt
 set /p TITLEKEY=<TitleKeyKSS.txt
 cls
@@ -328,6 +331,7 @@ IF EXIST TitleKeyKMA.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour Kirby Mouse Attack (EUR): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeyKMA.txt
 set /p TITLEKEY=<TitleKeyKMA.txt
 cls
@@ -351,6 +355,7 @@ IF EXIST TitleKeyNSMBU.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour New Super Mario Bros. (USA): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeyNSMBU.txt
 set /p TITLEKEY=<TitleKeyNSMBU.txt
 cls
@@ -372,6 +377,7 @@ IF EXIST TitleKeyNSMBE.txt goto:EnterCommon
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 echo Entrez la title key pour New Super Mario Bros. (EUR): >con
 set /p TITLEKEY=>con
+call "..\..\functions\CONV_VAR_to_min.bat" "TITLEKEY"
 echo %TITLEKEY:~0,32%>TitleKeyNSMBE.txt
 set /p TITLEKEY=<TitleKeyNSMBE.txt
 cls
@@ -443,6 +449,7 @@ IF "%BASEDECIDE%"=="8" (
 cd NUSPacker
 echo Cette étape ne sera plus nécessaire la prochaine fois que vous lancerez Injectiine. >con
 set /p COMMON=Entrez la Wii U Common Key: >con
+call "..\..\..\functions\CONV_VAR_to_MAJ.bat" "COMMON"
 echo %COMMON:~0,32%>encryptKeyWith
 set /p COMMON=<encryptKeyWith
 cls

@@ -749,12 +749,14 @@ echo.>con
 :redoskip
 set BASETITLEID=00050000101B0700
 IF NOT EXIST "TOOLS\Storage\BASETITLEKEY" set /p BASETITLEKEY=Entrez ou copiez-collez la eShop Title Key pour Rhythm Heaven Fever [USA] (ne sera pas redemandée à l'avenir): >con
+IF NOT EXIST "TOOLS\Storage\BASETITLEKEY" call "TOOLS\Storage\functions\CONV_VAR_to_min.bat" "BASETITLEKEY"
 IF NOT EXIST "TOOLS\Storage\BASETITLEKEY" echo %BASETITLEKEY:~0,32%>TOOLS\Storage\BASETITLEKEY
 set /p BASETITLEKEY=<TOOLS\Storage\BASETITLEKEY
 if not "%BASETITLEKEY:~0,4%"=="04ea" goto:redokey
 IF EXIST "TOOLS\NUSPacker\encryptKeyWith" goto:keyexist
 echo.>con
 set /p WiiUCommon=Entrez ou copiez-collez la Wii U Common Key (ne sera pas redemandée à l'avenir): >con
+call "TOOLS\Storage\functions\CONV_VAR_to_MAJ.bat" "WiiUCommon"
 echo %WiiUCommon:~0,32%>TOOLS\NUSPacker\encryptKeyWith
 echo http://ccs.cdn.wup.shop.nintendo.net/ccs/download>TOOLS\JNUSTool\config
 echo %WiiUCommon:~0,32%>>TOOLS\JNUSTool\config
@@ -1209,6 +1211,7 @@ echo.>con
 IF /i NOT "%overclock%"=="o" goto:skipoverclockstuff
 :recheckancast
 IF NOT "%ancast:~0,4%"=="B5D8" (echo.>con) & (set /p ancast=Entrez ou copiez-collez la Wii U Starbuck Ancast Key (ne sera pas redemandée à l'avenir^): >con)
+call "TOOLS\Storage\functions\CONV_VAR_to_MAJ.bat" "ancast"
 IF NOT "%ancast:~0,4%"=="B5D8" (echo.>con) & (echo La Wii U Starbuck Ancast Key est incorrecte, réessayez.>con) & (goto:recheckancast)
 echo %ancast:~0,32%>TOOLS\c2w\starbuck_key.txt
 echo.>con
