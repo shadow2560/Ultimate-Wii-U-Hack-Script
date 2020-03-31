@@ -756,7 +756,7 @@ if not "%BASETITLEKEY:~0,4%"=="04ea" goto:redokey
 IF EXIST "TOOLS\NUSPacker\encryptKeyWith" goto:keyexist
 echo.>con
 set /p WiiUCommon=Entrez ou copiez-collez la Wii U Common Key (ne sera pas redemandée à l'avenir): >con
-call "TOOLS\Storage\functions\CONV_VAR_to_MAJ.bat" "WiiUCommon"
+call "TOOLS\Storage\functions\CONV_VAR_to_MAJ.bat" WiiUCommon
 echo %WiiUCommon:~0,32%>TOOLS\NUSPacker\encryptKeyWith
 echo http://ccs.cdn.wup.shop.nintendo.net/ccs/download>TOOLS\JNUSTool\config
 echo %WiiUCommon:~0,32%>>TOOLS\JNUSTool\config
