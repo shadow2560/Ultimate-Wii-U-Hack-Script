@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>vWii-NAND-Restorer</name>
+  <coder>GaryOderNichts</coder>
+  <version>v2</version>
+  <release_date>20200329210000</release_date>
+  <short_description>vWii-Nand-Restorer</short_description> 
+  <long_description>
+  	Restore your vWii NAND backups from your Wii U.
+  </long_description> 
+  <url>https://github.com/GaryOderNichts/vWii-NAND-Restorer</url>
+  <category>tool</category>
+</app>
