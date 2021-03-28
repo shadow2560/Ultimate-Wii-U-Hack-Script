@@ -2,7 +2,7 @@
 <app version="1">
   <name>WiiU Nand Dumper</name>
   <coder>koolkdev</coder>
-  <version>0.3</version>
+  <version>0.4</version>
   <url>https://gbatemp.net/threads/nand-dumper-create-full-dumps-of-the-nand.465680/</url>
   <release_date>20170294165302</release_date>
   <short_description>Create Full Dumps of the NAND</short_description>
