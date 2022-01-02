@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>HB App Store</name>
+  <coder>4TU Team</coder>
+  <version>2.2</version>
+  <release_date>20190209200000</release_date>
+  <url>https://gitlab.com/4tu/hb-appstore</url>
+  <short_description>Download homebrew apps</short_description>
+<long_description>Homebrew App Store allows you to download homebrew apps for HBL directly in the app. Installed apps can also be reinstalled, updated, or deleted.
+
+Music by (T-T)b (google t tb chiptunes!)
+Thanks to pwsincd, rw-r-r_0644, brienj, and dimok!
+
+source code: https://github.com/vgmoose/hb-appstore
+</long_description>
+<category>tool</category>
+
+</app>

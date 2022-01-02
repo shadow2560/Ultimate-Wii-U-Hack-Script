@@ -42,10 +42,61 @@ Tutoriels de référence:
 <li>mocha: Le CFW Mocha.</li>
 <li>nanddumper: Permet de dumper la nand Wii U.</li>
 <li>nnu-patcher: Permet d'installer les mises à jour des jeux ou de lancer le shop Nintendo malgré une version système inférieur à la version requise par Nintendo pour y accéder. Permet également d'y accéder si les mises à jour ont été bloquée via le routeur ou via les DNS de la console.</li>
+<li>savemii_mod: Permet de sauvegarder/restaurer les sauvegardes des jeux.</li>
 <li>sign_c2w_patcher: Permet de patcher la Wii U pour prendre en compte le boost des homebrews lancées via une Wii VC. Il est a noter que ce homebrew seul ne suffit pas, il faut aussi créer la Wii VC selon certaines règles pour que le boost fonctionne et tous les homebrews Wii ne sont pas compatibles.</li>
 <li>sign_patcher: Permet de patcher quelques signatures et de pouvoir revenir dirrectement au HBL, pratique pour ceux en 5.5.2 sans Haxchi qui voudraient installer la chaîne HBL avec WUP Instaler. Une fois cela fait, Mocha reste plus complet donc inutile de garder ce homebrew ensuite.</li>
 <li>wup_installer_gx2: Permet d'installer les jeux, DLCs, mises à jour et chaînes présent dans le dossier "install" de la carte SD. Chaque élément à installer doit être mis dans un dossier spécifique, peut importe son nom (les caractères spéciaux sont à éviter), dans ce dossier.</li>
 </ul>
+&nbsp;
+<h3>Les homebrews Wii présents dans le dossier "apps":</h3>
+&nbsp;
+<ul>
+<li>nintendont: Le loader de jeux Gamecube.</li>
+</ul>
+&nbsp;
+<h3>Les chaînes à installer avec WUP Installer et les sig_patches activés (utiliser Mocha, le CFW d'Haxchi ou CBHC):</h3>
+&nbsp;
+<ul>
+<li>hbl_channel: La chaîne du Homebrew Launcher.</li>
+<li>wup_installer_gx2_channel: La chaîne de Wup Installer GX2.</li>
+</ul>
+&nbsp;
+<h2>Contenu de l'environement Tiramisu</h2>
+&nbsp;
+<p>
+Tutoriel de référence:
+<br/>
+<a target="_new" href="https://wiiu.hacks.guide/#/tiramisu/sd-preparation">Mise en place de l'environement Tiramisu</a>
+</p>
+&nbsp;
+<h3>Contenu des fichiers et dossiers à la racine de la SD:</h3>
+&nbsp;
+<ul>
+<li>apps: Le dossier des homebrews Wii.</li>
+<li>controllers: Ce dossier contient des fichiers de configuration permettant de faire en sorte que certaines manettes soient reconnues par Nintendont.</li>
+<li>games: Le dossier pour la mise en place de la structure des jeux Gamecube.</li>
+<li>install: Le dossier dans lequel on copiera les jeux, DLCs, mises à jour et chaînes à installer via l'homebrew Wup Installer GX2.</li>
+<li>wiiu: Ce dossier contient un dossier apps qui est le dossier contenant les homebrews Wii U. Ce dossier "wiiu"  contient également les dossiers/fichiers nécessaires à la mise en place de l'environement Tiramisu.</li>
+<li>nincfg.bin: Un fichier de configuration pour Nintendont. Les options de widescreen sont activées, les cartes mémoires sont émulées et une carte mémoire de 251 blocks est créée par jeu. Les autres options sont par défaut.</li>
+</ul>
+&nbsp;
+<h3>Les homebrews Wii U présents dans le dossier "wiiu/apps":</h3>
+&nbsp;
+<ul>
+<li>appstore: Installer, mettre à jour ou supprimer les homebrews de la Wii U simplement.</li>
+<li>Bloopair_pair_menu: Utiliser des manettes différentes de celles de la WiiU.</li>
+<li>Dumpling: Dumper un grand nombre d'éléments.</li>
+<li>homebrew_launcher: La version 1.4 du Homebrew Launcher Wii U, à ne pas toucher.</li>
+<li>nanddumper: Permet de dumper la nand Wii U.</li>
+<li>nnu-patcher: Permet d'installer les mises à jour des jeux ou de lancer le shop Nintendo malgré une version système inférieur à la version requise par Nintendo pour y accéder. Permet également d'y accéder si les mises à jour ont été bloquée via le routeur ou via les DNS de la console.</li>
+<li>savemii_mod: Permet de sauvegarder/restaurer les sauvegardes des jeux.</li>
+<li>sign_c2w_patcher: Permet de patcher la Wii U pour prendre en compte le boost des homebrews lancées via une Wii VC. Il est a noter que ce homebrew seul ne suffit pas, il faut aussi créer la Wii VC selon certaines règles pour que le boost fonctionne et tous les homebrews Wii ne sont pas compatibles.</li>
+<li>wup_installer_gx2: Permet d'installer les jeux, DLCs, mises à jour et chaînes présent dans le dossier "install" de la carte SD. Chaque élément à installer doit être mis dans un dossier spécifique, peut importe son nom (les caractères spéciaux sont à éviter), dans ce dossier.</li>
+</ul>
+&nbsp;
+<p>
+Note importante: Les homebrews "mocha" et "sign_patcher" seront automatiquement supprimés car inutils dans l'environement Tiramisu.
+</p>
 &nbsp;
 <h3>Les homebrews Wii présents dans le dossier "apps":</h3>
 &nbsp;
@@ -67,6 +118,7 @@ Tutoriel de référence:
 <br/>
 <a target="_new" href="http://nintendo-wii.logic-sunrise.com/dossiers-et-tutoriaux-924206-installation-de-lhomebrew-channel-sur-vwii-et-lancement-de-backups-wii-sur-wii-u.html">Installation de l'Homebrew Channel sur vWii et lancement de backups Wii sur Wii U</a>
 </p>
+&nbsp;
 <h3>Contenu des fichiers et dossiers à la racine de la SD:</h3>
 &nbsp;
 <ul>

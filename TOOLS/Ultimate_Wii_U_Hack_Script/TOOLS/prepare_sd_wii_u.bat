@@ -155,7 +155,7 @@ IF "%ERRORLEVEL%"=="2" (
 )
 IF NOT "%ERRORLEVEL%"=="1" (
 	IF NOT "%ERRORLEVEL%"=="0" (
-		echo Une erreur inconue s'est produit pendant le formatage. >con
+		echo Une erreur inconue s'est produite pendant le formatage. >con
 		echo.>con
 		echo Le script va maintenant s'arrêter. >con
 		goto:endscript
@@ -185,6 +185,16 @@ set /p copy_wiiu_pack=Souhaitez-vous copier le pack pour le hack Wii U? (O/n): >
 IF /i NOT "%copy_wiiu_pack%"=="" set copy_wiiu_pack=%copy_wiiu_pack:~0,1%
 set /p copy_vwii_pack=Souhaitez-vous copier le pack pour le hack V-Wii? (O/n): >con
 IF /i NOT "%copy_vwii_pack%"=="" set copy_vwii_pack=%copy_vwii_pack:~0,1%
+set /p copy_tiramisu=Souhaitez-vous copier l'environement Tiramisu? (O/n): >con
+IF /i NOT "%copy_tiramisu%"=="" set copy_tiramisu=%copy_tiramisu:~0,1%
+IF /i "%copy_tiramisu%"=="o" (
+	set propose_launch_doc=O
+	echo ATTENTION: Veuillez bien vous renseigner sur la procédure à effectuer avant d'installer ou d'utiliser l'environement Tiramisu. >con
+	echo Vous pourez trouver un lien vers un tutoriel dans la documentation, il vous sera proposé de l'ouvrir après la copie des fichiers. >con
+	echo ATTENTION: Si CBHC ou Haxchi sont déjà installé sur votre console, il est fortement recommandé (obligatoire dans le cas de CBHC) de les désinstaller via leurs installeurs avant d'exécuter l'installation de l'environement de développement Tiramisu. >con
+	pause >con
+	goto:pass_haxchi_cbhc_choices
+)
 set /p copy_haxchi=Souhaitez-vous copier les fichiers nécessaires à l'installation d'Haxchi? (O/n): >con
 IF /i NOT "%copy_haxchi%"=="" set copy_haxchi=%copy_haxchi:~0,1%
 IF /i "%copy_haxchi%"=="o" (
@@ -208,6 +218,7 @@ IF /i "%copy_cbhc%"=="o" (
 		set /p copy_haxchi=Souhaitez-vous copier également l'installateur d'Haxchi? (O/n^): >con
 	)
 )
+:pass_haxchi_cbhc_choices
 echo Copie en cours... >con
 IF /i "%copy_wiiu_pack%"=="o" (
 	IF /i "%del_files_dest_copy%"=="o" (
@@ -236,6 +247,22 @@ IF /i "%copy_vwii_pack%"=="o" (
 	del /Q /S "%volume_letter%:\games\.emptydir" >nul 2>&1
 	del /Q /S "%volume_letter%:\wbfs\.emptydir" >nul 2>&1
 )
+IF /i "%copy_tiramisu%"=="o" (
+	IF /i "%del_files_dest_copy%"=="o" (
+		%windir%\System32\Robocopy.exe TOOLS\sd_wiiu\mixed %volume_letter%:\ /mir
+		%windir%\System32\Robocopy.exe TOOLS\sd_wiiu\hbl %volume_letter%:\ /e
+		%windir%\System32\Robocopy.exe TOOLS\sd_wiiu\tiramisu %volume_letter%:\ /e
+		set del_files_dest_copy=n
+	) else (
+		%windir%\System32\Robocopy.exe TOOLS\sd_wiiu\mixed %volume_letter%:\ /e
+		%windir%\System32\Robocopy.exe TOOLS\sd_wiiu\hbl %volume_letter%:\ /e
+		%windir%\System32\Robocopy.exe TOOLS\sd_wiiu\tiramisu %volume_letter%:\ /e
+	)
+	del /Q /S "%volume_letter%:\games\.emptydir" >nul 2>&1
+	del /Q /S "%volume_letter%:\wbfs\.emptydir" >nul 2>&1
+	rmdir /s /q "%volume_letter%:\wiiu\apps\mocha"
+	rmdir /s /q "%volume_letter%:\wiiu\apps\sign_patcher_v0.1_return_to_HBL"
+)
 IF /i "%copy_haxchi%"=="o" (
 	IF /i "%del_files_dest_copy%"=="o" (
 		%windir%\System32\Robocopy.exe TOOLS\sd_wiiu\haxchi_cbhc\haxchi %volume_letter%:\ /mir
@@ -258,7 +285,7 @@ IF /i "%copy_cbhc%"=="o" (
 )
 echo Copie terminée. >con
 IF "%propose_launch_doc%"=="O" (
-	echo Vous avez choisi de copier Haxchi ou CBHC. Si vous ne savez pas comment les utilisés ensuite, il est fortement conseillé de lancer la documentation. >con
+	echo Vous avez choisi de copier Tiramisu, Haxchi ou CBHC. Si vous ne savez pas comment les utilisés ensuite, il est fortement conseillé de lancer la documentation. >con
 	set /p launch_doc=Souhaitez-vous lancer la documentation? (O/n^): >con
 )
 IF NOT "%launch_doc%"=="" set launch_doc=%launch_doc:~0,1%
