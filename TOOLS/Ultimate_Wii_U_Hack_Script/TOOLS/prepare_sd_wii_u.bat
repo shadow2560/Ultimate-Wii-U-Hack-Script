@@ -191,7 +191,7 @@ IF /i "%copy_tiramisu%"=="o" (
 	set propose_launch_doc=O
 	echo ATTENTION: Veuillez bien vous renseigner sur la procédure à effectuer avant d'installer ou d'utiliser l'environement Tiramisu. >con
 	echo Vous pourez trouver un lien vers un tutoriel dans la documentation, il vous sera proposé de l'ouvrir après la copie des fichiers. >con
-	echo ATTENTION: Si CBHC ou Haxchi sont déjà installé sur votre console, il est fortement recommandé (obligatoire dans le cas de CBHC) de les désinstaller via leurs installeurs avant d'exécuter l'installation de l'environement de développement Tiramisu. >con
+	echo ATTENTION: Si CBHC ou Haxchi sont déjà installé sur votre console, il est fortement recommandé ^(obligatoire dans le cas de CBHC^) de les désinstaller via leurs installeurs avant d'exécuter l'installation de l'environement de développement Tiramisu. >con
 	pause >con
 	goto:pass_haxchi_cbhc_choices
 )
@@ -291,9 +291,11 @@ IF "%propose_launch_doc%"=="O" (
 IF NOT "%launch_doc%"=="" set launch_doc=%launch_doc:~0,1%
 IF /i "%launch_doc%"=="o" (
 	start DOC\index.html
+	goto:endscript2
 )
 :endscript
+pause >con
+:endscript2
 rmdir /s /q templogs
 ::reg.exe Delete "HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "%path_fat32format%" /f
-pause >con
 endlocal
