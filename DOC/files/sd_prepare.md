@@ -1,6 +1,6 @@
 <h1>Contenu des différents packs</h1>
 &nbsp;
-<a href="../index.html">Aller à la documentation du script</a>
+<a href="https://github.com/shadow2560/Ultimate-Wii-U-Hack-Script/tree/master/DOC/index.md">Aller à la documentation du script</a>
 <br/>
 <h2>Contenu du pack "hack_wiiu"</h2>
 &nbsp;

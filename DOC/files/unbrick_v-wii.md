@@ -1,6 +1,6 @@
 <h1>Fonctions de débrick de la V-wii</h1>
 &nbsp;
-<a href="../index.html">Aller à la documentation du script</a>
+<a href="https://github.com/shadow2560/Ultimate-Wii-U-Hack-Script/tree/master/DOC/index.md">Aller à la documentation du script</a>
 <br/>
 <h2>Généralités</h2>
 &nbsp;
