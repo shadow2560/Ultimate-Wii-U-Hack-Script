@@ -4,7 +4,7 @@ Ceci est un ensemble de scripts batch automatisant beaucoup de choses.
 
 La licence GPL V3 s'applique sur les scripts batch . Pour le reste, les licences propres aux logiciels concernés s'appliquent.
 
-La documentation se trouve <a target="_blank" href="https://github.com/shadow2560/Ultimate-Wii-U-Hack-Script/raw/master/DOC/index.html">sur cette page</a>.
+La documentation se trouve <a target="_blank" href="https://github.com/shadow2560/Ultimate-Wii-U-Hack-Script/tree/master/DOC/index.md">sur cette page</a>.
 
 ## Fonctionnalités
 
@@ -22,9 +22,9 @@ La documentation se trouve <a target="_blank" href="https://github.com/shadow256
 ### Autres fonctionnalités
 
 * Installation des éléments requis pendant l'utilisation des scripts (Java 8).
-* Mises en place des fichiers nécessaires au hack basique Wii U, au hack de la partie v-wii, à l'installation d'Haxchi ou à l'installation de CBHC. Pour plus d'informations, voir <a target="_blank" href="https://github.com/shadow2560/Ultimate-Wii-U-Hack-Script/raw/master/DOC/files/sd_prepare.html">cette page de la documentation</a>.
+* Mises en place des fichiers nécessaires au hack basique Wii U, au hack de la partie v-wii, à l'installation d'Haxchi ou à l'installation de CBHC. Pour plus d'informations, voir <a target="_blank" href="https://github.com/shadow2560/Ultimate-Wii-U-Hack-Script/tree/master/DOC/files/sd_prepare.md">cette page de la documentation</a>.
 * Création d'un serveur web permettant d'héberger l'exploit navigateur en local pour les versions système 5.5.X de la Wii U.
-* Débricker la partie V-wii, voir <a target="_blank" href="https://github.com/shadow2560/Ultimate-Wii-U-Hack-Script/raw/master/DOC/files/unbrick_v-wii.html">cette page de la documentation</a> pour plus d'informations.
+* Débricker la partie V-wii, voir <a target="_blank" href="https://github.com/shadow2560/Ultimate-Wii-U-Hack-Script/tree/master/DOC/files/unbrick_v-wii.md">cette page de la documentation</a> pour plus d'informations.
 * Bloquer ou autoriser la mise à jour du firmware de la console en supprimant/restaurant le dossier adéquat via Wup_server, voir <a target="_new" href="http://nintendo-wii.logic-sunrise.com/dossiers-et-tutoriaux-950209-wii-u-bloquer-les-mises-a-jour-de-votre-wii-u-sans-dns-et-sans-spoof.html">cette page</a> pour plus d'informations sur le dossier modifié.
 
 ## Bugs connus:

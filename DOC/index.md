@@ -1,0 +1,622 @@
+<h1>Documentation Shadow256 Ultimate Wii U Hack Script</h1>
+&nbsp;
+<h2>Introduction</h2>
+&nbsp;
+<p>
+Ceci est un ensemble de script permettant de réaliser différentes tâches pour permettre de profiter simplement des différentes possibilités qu'ofre le hack Wii U.
+<br/><br/>
+Cette documentation a pour but d'orienter l'utilisateur pour faire fonctionner au mieux ces outils. Le sujet concernant cette application se trouve sur <a target="_new" href="http://www.logic-sunrise.com/forums/topic/79223-shadow256-ultimate-wii-u-hack-script/">cette page</a>.
+<br/><br/>
+Ce script est utilisable sur Windows 7 32 et 64 bits ainsi que sur les versions supérieurs (Windows Vista non testé).
+<br/><br/>
+Notez que je ne pourrai être tenu responsable en cas de domages résultant de l'utilisation de ce logiciel et de tout se qu'il contient.
+</p>
+&nbsp;
+<h2>Fonctionnalités</h2>
+&nbsp;
+<h3>Wiivc Injector Script</h3>
+&nbsp;
+<ul>
+<li>Injection de jeux Wii, Gamecube, homebrews Wii et Wiivc Chan Booter grâce à une version modifiée de Wiivc Injector Script 2.2.6.</li>
+<li>Sauvegarde, restauration et remise à zéro des différents paramètres.</li>
+<li>Création d'une blacklist pour éviter qu'une injection puisse avoir le même Title ID.</li>
+</ul>
+&nbsp;
+<h3>Injectiine</h3>
+&nbsp;
+<ul>
+<li>Injection de jeux NES, SNES, GBA, N64 et NDS grâce à une version modifiée de Injectiine.</li>
+<li>Sauvegarde, restauration et remise à zéro des différents paramètres.</li>
+<li>Création d'une blacklist pour éviter qu'une injection puisse avoir le même Title ID.</li>
+</ul>
+&nbsp;
+<h3>Autres fonctionnalités</h3>
+&nbsp;
+<ul>
+<li>Installation des éléments requis pendant l'utilisation des scripts (Java 8).</li>
+<li>Mises en place des fichiers nécessaires au hack basique Wii U, au hack de la partie v-wii, à l'installation de l'environement Tiramisu, à l'installation d'Haxchi ou à l'installation de CBHC. Pour plus d'informations, voir <a href="https://github.com/shadow2560/Ultimate-Wii-U-Hack-Script/tree/master/DOC/files/sd_prepare.md">cette page de la documentation</a>.</li>
+<li>Création d'un serveur web permettant d'héberger l'exploit navigateur en local pour les versions système 5.5.X de la Wii U.</li>
+<li>Débricker la partie V-wii, voir <a href="https://github.com/shadow2560/Ultimate-Wii-U-Hack-Script/tree/master/DOC/files/unbrick_v-wii.md">cette page de la documentation</a> pour plus d'informations.</li>
+<li>Bloquer ou autoriser la mise à jour du firmware de la console en supprimant/restaurant le dossier adéquat via Wup_server, voir <a target="_new" href="http://nintendo-wii.logic-sunrise.com/dossiers-et-tutoriaux-950209-wii-u-bloquer-les-mises-a-jour-de-votre-wii-u-sans-dns-et-sans-spoof.html">cette page</a> pour plus d'informations sur le dossier modifié.</li>
+</ul>
+&nbsp;
+<h2>Bugs connus et choses à faire</h2>
+&nbsp;
+<ul>
+<li>L'injection d'un jeu via Wiivc Injector Script plantera ou donnera un jeu ne fonctionnant pas s'il est exécuté à partir d'un support formaté en FAT, FAT16 ou FAT32. Ce problème ne peut pas être corrigé car un fichier temporaire fait obligatoirement plus de 4 GO durant l'injection et donc pose problème sur les supports formatés en FAT, FAT16 ou FAT32.</li>
+<li>L'utilisation de guillemets ou de points d'exclamations dans les entrées utilisateurs fait planter le script.</li>
+<li>Lorsqu'une sortie console faite par un "echo" est effectuée, cela produit une erreur dans le fichier log. L'encodage en UTF-8 semble être à l'origine de ce problème mais je n'ai pas trouvé comment le résoudre pour l'instant.</li>
+<li>Dans Wiivc Injector Script, si le jeu Wii est splité (sauf fichiers "wbfs") et que son chemin ou son nom contient un accent ou tout autre symboles refusé par Wit, le script ne fonctionnera pas, même avec la tentative de correction d'erreurs.</li>
+<li>Pour l'instant, le script permettant d'extraire le dump MLC de la nand Wii U n'accepte pas l'extraction vers un dossier se trouvant dans un chemin ayant des espaces et est obligé de faire des manipulations sur les fichiers qui ne devraient pas être nécessaire mais Wfs-extract ne semble pas vouloir des chemins avec des espaces, je cherche une solution.</li>
+</ul>
+&nbsp;
+<h2>Liens utiles</h2>
+&nbsp;
+<p>
+Cette documentation ne couvrira pas les différents tutoriels d'utilisations de Wiivc Injector Script, d'Injectiine ou encore la mise en place des différents hacks mais voici quelques liens utiles:
+<br/>
+<a target="_new" href="http://www.logic-sunrise.com/dossiers-et-tutoriaux-956288-wii-u-injecter-un-jeu-gamecube-dans-une-vc-wii-avec-wiivc-injector-script.html">Tutoriel d'utilisation de Wiivc Injector Script</a>
+<br/>
+<a target="_new" href="https://wiiu.hacks.guide/#/tiramisu/sd-preparation">Mise en place de l'environement Tiramisu</a>
+<br/>
+<a target="_new" href="http://nintendo-wii.logic-sunrise.com/dossiers-et-tutoriaux-959469-installation-de-cfw-sur-wii-u.html">Installation d'un CFW sur Wii U</a>
+<br/>
+<a target="_new" href="http://nintendo-wii.logic-sunrise.com/dossiers-et-tutoriaux-950209-wii-u-bloquer-les-mises-a-jour-de-votre-wii-u-sans-dns-et-sans-spoof.html">Bloquer les mises à jour système sans DNS</a>
+<br/>
+<a target="_new" href="http://nintendo-wii.logic-sunrise.com/dossiers-et-tutoriaux-924206-installation-de-lhomebrew-channel-sur-vwii-et-lancement-de-backups-wii-sur-wii-u.html">Installation de l'Homebrew Channel sur vWii et lancement de backups Wii sur Wii U</a>
+<br/>
+<a target="_new" href="http://www.logic-sunrise.com/news-966356-wiiu-injectiine-de-catmanfan-disponible-en-version-stable.html">News concernant Injectiine</a>
+<br/>
+<a target="_new" href="https://gbatemp.net/threads/release-injectiine-wii-u-virtual-console-injector.491386/">Le sujet officiel d'Injectiine sur Gbatemp</a>
+</p>
+&nbsp;
+<h2>Changelog</h2>
+&nbsp;
+<h3>V1.89:</h3>
+<ul>
+<li>Mise à jour du Recovery Menu en version 0.2. Le fichier "recovery_menu_dc_init" (à renommer en "recovery_menu" si problème d'affichage du Recovery Menu normal) a été ajouté.</li>
+</ul>
+<h3>V1.88:</h3>
+<ul>
+<li>Mise à jour du Recovery Menu avec la version master du Github, compilé par moi-même.</li>
+</ul>
+<h3>V1.87:</h3>
+<ul>
+<li>Ajout du <a target="_blank" href="https://github.com/GaryOderNichts/recovery_menu/">Recovery Menu</a> lié à <a target="_blank" href="https://github.com/GaryOderNichts/udpih/">l'exploit Udpih</a> lors de la préparation d'une SD.</li>
+<li>Mise à jour de la documentation de la préparation de SD.</li>
+</ul>
+<h3>V1.86:</h3>
+<ul>
+<li>Mise à jour de Bloopair en version 0.5.2.</li>
+</ul>
+<h3>V1.85:</h3>
+<ul>
+<li>Mise à jour de Tiramisu en version a3d11ee.</li>
+<li>Mise à jour de Bloopair en version 0.5.1.</li>
+</ul>
+<h3>V1.84:</h3>
+<ul>
+<li>Correction d'un bug dans la préparation d'une SD qui faisait que le script se fermait dans certaines conditions.</li>
+</ul>
+<h3>V1.83:</h3>
+<ul>
+<li>Ajout de la possibilité de mettre en place les bases pour installer l'environement Tiramisu dans la préparation de la SD.</li>
+</ul>
+<h3>V1.82:</h3>
+<ul>
+<li>Mise à jour de wiiu-nanddumper en version 0.4.</li>
+</ul>
+<h3>V1.81:</h3>
+<ul>
+<li>Mise à jour de Dumpling en version 1.1.2.</li>
+<li>Mise à jour de Vwii-nand-restorer en version 2.</li>
+</ul>
+<h3>V1.80:</h3>
+<ul>
+<li>Ajout de <a target="_blank" href="https://github.com/emiyl/dumpling">Dumpling</a> aux homebrews pour la préparation du hack Wii U.</li>
+</ul>
+<h3>V1.79:</h3>
+<ul>
+<li>Les clés entrées dans Wii-VC-Injector ou dans Injectiine sont maintenant converties automatiquement en majuscules ou minuscules selon la clé pour réduire les risques d'erreurs non critique de saisie.</li>
+</ul>
+<h3>V1.78:</h3>
+<ul>
+<li>Ajout du homebrew <a target="_blank" href="https://github.com/GaryOderNichts/vWii-NAND-Restorer/">vWii-NAND-Restorer</a> lors de la préparation d'une SD avec le hack v-wii.</li>
+</ul>
+<h3>V1.77:</h3>
+<ul>
+<li>Mise à jour de Homebrew App Store en version 2.2.</li>
+</ul>
+<h3>V1.76:</h3>
+<ul>
+<li>Ajout du homebrew CleanRip dans la liste des homebrews Wii.</li>
+</ul>
+<h3>V1.75:</h3>
+<ul>
+<li>Mise à jour de Nintendont vers la version Master du Github.</li>
+</ul>
+<h3>V1.74:</h3>
+<ul>
+<li>Mise à jour du payload de JSTypeHax, voir <a target="_new" href="http://www.logic-sunrise.com/news-1064402-wiiu-lexploit-webkit-plus-stable-de-la-552-a-la-554.html">cette page</a> pour les infos.</li>
+</ul>
+<h3>V1.73:</h3>
+<ul>
+<li>Correction d'un bug dans WiiVC Injector Script qui empêchait une injection correcte pour certains types de fichier.</li>
+</ul>
+<h3>V1.72:</h3>
+<ul>
+<li>Correction d'un bug dans Injectiine.</li>
+</ul>
+<h3>V1.71:</h3>
+<ul>
+<li>Ajout d'une action pour me faire une donation dans les différents menus principaux.</li>
+</ul>
+<h3>V1.70:</h3>
+<ul>
+<li>Quelques changements pour rendre la navigation plus clair dans les différents menu.</li>
+</ul>
+<h3>V1.69:</h3>
+<ul>
+<li>Mise à jour du nouvel exploit JsTypeHax utilisant l'exploit navigateur pour les firmwares 5.5.X vers la dernière version Master des projets Github lié à ce projet.</li>
+</ul>
+<h3>V1.68:</h3>
+<ul>
+<li>Mise à jour du script de préparation d'une SD pour s'adapter à l'arborescence du Github.</li>
+</ul>
+<h3>V1.67:</h3>
+<ul>
+<li>Ajout d'une nouvelle méthode pour héberger et lancer l'exploit en 5.5.2 ou 5.5.3.</li>
+</ul>
+<h3>V1.66:</h3>
+<ul>
+<li>Correction d'un bug dans l'hébergement de l'exploit web.</li>
+</ul>
+<h3>V1.65:</h3>
+<ul>
+<li>Correction d'un bug dans la préparation d'une SD qui faisait tourner le script en boucle si aucun périphérique compatible n'était détecté.</li>
+</ul>
+<h3>V1.64B  (ne pas écraser une ancienne version car certains remaniements de dossiers/fichiers):</h3>
+<ul>
+<li>Le script vérifie maintenant s'il a les droits nécessaires pour écrire dans son répertoire d'exécution. Si les droits ne sont pas suffisants, le script affiche une erreur et se ferme.</li>
+<li>Les raccourcis pour lancer les scripts ont été remplacés par des scripts, se qui résou les problèmes lors du lancement de ceux-ci en tant qu'administrateur.</li>
+<li>Correction d'un problème avec le fichier "vcruntime140.dll" qui empêchait certaines fonctions de s'exécuter corectement sur les système 32 bits.</li>
+</ul>
+<h3>V1.63B:</h3>
+<ul>
+<li>Correction d'un bug qui aurait pu se produire au lancement des scripts.</li>
+<li>Maintenant, le script ne se ferme plus à la fin de chaque fonction.</li>
+</ul>
+<h3>V1.62B:</h3>
+<ul>
+<li>Support de certaines lettres accentuées minuscule (ceux de la langue française au moins), du "ç" et de quelques autres signes dans les noms cours et longs des jeux injectés via Wiivc Injector Script ou via Injectiine, merci à @Impa0726 de Logic-sunrise pour la suggestion et pour les testes.</li>
+<li>Correction de bugs importants dans Wiivc Injector Script.</li>
+<li>Modification du script d'injection de jeu NDS dans Injectiine pour pouvoir supprimer la version de 7zip qui était dans le dossier du script, maintenant il utilise la version globale à Injectiine donc cela fait un doublon de logiciel en moins.</li>
+<li>Légères améliorations dans le script de remise à zéro d'Injectiine.</li>
+</ul>
+<h3>V1.61B:</h3>
+<ul>
+<li>Ajout d'une fonction pour merger la partition MLC dumpée avec le homebrew Wii U Nand Dumper.</li>
+<li>Ajout d'une fonction pour extraire les fichiers du dump de la partition MLC grâce à Wfs-extract. Ce script a quelques limitations, lisez bien les messages au début de l'exécution de celui-ci et évitez d'interrompre le script.</li>
+<li>Correction de divers bugs.</li>
+<li>Corrections et ajouts dans la documentation.</li>
+</ul>
+<h3>V1.60B (ne pas copier par-dessus une version précédente et éventuellement restaurer les paramètres via les fichiers de sauvegardes):</h3>
+<ul>
+<li>Ajout de la possibilité de sauvegarder/restaurer/supprimer certains fichiers de la v-wii pour débricker celle-ci, voir <a target="_new" href="https://www.reboot.ms/forum/threads/unbrick-vwii-di-wiiu.5056/">cette page</a> pour plus d'informations, merci à @fystrack du forum de Logic-sunrise pour l'info. S'il vous plaît, veuillez lire la documentation pour comprendre de quelle façon fonctionne ces scripts. Cette fonction n'est qu'une Beta et des contrôles d'erreurs plus importants seront faits dans les prochaines versions donc soyez très prudent en utilisant ces scripts.</li>
+<li>Ajout de la possibilité de bloquer ou d'autoriser la mise à jour du firmware de la console en supprimant/restaurant le dossier "/vol/storage_mlc01/sys/update" via Wup_server. Un fichier vide nommé "update" est également créé dans ce dossier pendant le script de blocage des mises à jour pour plus de sécurité.</li>
+<li>Correction de la fonction "dl" de Wupclient qui ne fonctionnait pas. J'ai également apporté cette correction sur le fichier "wupclient_orig.py".</li>
+<li>Correction du script python permettant de blacklister les Title ID déjà utilisé pour qu'il soit quitté correctement.</li>
+<li>Changement du binaire de Wget vers la version 19.04.</li>
+<li>Modification de la documentation.</li>
+<li>Quelques bugs corrigés.</li>
+</ul>
+<h3>V1.59B:</h3>
+<ul>
+<li>Correction de quelques fautes dans la documentation, merci à Vilko pour son aide.</li>
+<li>Ajout de quelques informations dans la documentation des packs pour la préparation du hack Wii U.</li>
+<li>Mise à jour vers la dernière version de Nintendont et de Wup Installer GX2 (le homebrew et la chaîne) pour la préparation du hack Wii U.</li>
+</ul>
+<h3>V1.58B:</h3>
+<ul>
+<li>Dans Wiivc Injector Script, suppression de la possibilité d'entrer le chemin d'une source manuellement. Maintenant, seul l'interface graphique de sélection d'un fichier s'ouvrira pour sélectionner une source et il suffira juste de la fermer pour ne pas utiliser de source pour un fichier.</li>
+<li>Dans Wiivc Injector Script, les sources des fichiers spécifiques à un format de jeu ne seront demandées que si elles peuvent s'y appliquer et si l'utilisateur choisi d'entrer les sources manuellement. Par exemple, cela concerne les cheats pour les jeux Wii ou encore le forwarder pouvant remplacer celui de Nintendont pour les jeux Gamecube.</li>
+</ul>
+<h3>V1.57B:</h3>
+<ul>
+<li>Dans Injectiine, tous les scripts vérifient si les images du dossier "Files" sont au format PNG et font la conversion si nécessaire. Du coup, le script "MetaVerify" n'est plus utile et a été supprimé. Injectiine fonctionne donc maintenant de la même façon que Wiivc Injector Script sur ce point (voir les modifications de la version 2.2.6 modified V1.27B pour en savoir plus).</li>
+<li>Dans Injectiine, tous les scripts demandent maintenant sous quelle format l'injection sera faite avant de commencer l'injection plutôt qu'à la fin de celle-ci.</li>
+<li>Dans Wiivc Injector Script, la vérification de la présence de Java est maintenant faite au début du script d'injection.</li>
+</ul>
+<h3>V1.56B:</h3>
+<ul>
+<li>Ajout de la possibilité de télécharger une base en fournissant son Title ID et sa Title Key dans toutes les injections d'Injectiine. Attention car aucune réelle vérification n'est faite et le script ou le jeu injecté via cette méthode pourrait planter si de mauvaises informations sont entrées.</li>
+<li>Le Product Code est maintenant défini automatiquement en se basant sur le fichier "cos.xml" de la base utilisée, modification valable pour les injections NES et SNES dans Injectiine.</li>
+<li>Dans Injectiine, pour l'injection de jeu N64, le nom de la rom et du fichier ini de configuration est automatiquement assigné en se basant sur le nom de la rom de la base. Si aucune rom n'est présente dans la base, il faudra définir le nom manuellement. Enfin, le nom peut toujours être personnalisé pendant le script.</li>
+<li>Dans Injectiine, pour l'injection de jeu N64, un fichier INI de configuration d'une base est ajouté aux répertoire "INIs" s'il n'existe pas.</li>
+<li>Intégration du répertoire "INIs" du script d'injection N64 à la fonction de sauvegarde/restauration des fichiers de configurations d'Injectiine.</li>
+<li>Tentative de correction de la création d'un fichier ini vierge dans Injectiine pour l'injection N64.</li>
+<li>Correction de quelques autres bugs.</li>
+</ul>
+<h3>V1.55B:</h3>
+<ul>
+<li>Correction d'un bug au moment d'entrer la Wii U Common Key dans le script d'injection NDS d'Injectiine.</li>
+<li>Correction de bugs dans les scripts de sauvegarde de configuration d'Injectiine et de Wiivc Injector Script.</li>
+</ul>
+<h3>V1.54B:</h3>
+<ul>
+<li>Correction de bugs dans l'injection GBA.</li>
+</ul>
+<h3>V1.53B:</h3>
+<ul>
+<li>Corrections de bugs.</li>
+</ul>
+<h3>V1.52B:</h3>
+<ul>
+<li>Ajout d'une version modifiée d'Injectiine pour injecter les jeux NES, SNES, GBA, N64 et NDS dans une virtual console appropriée.</li>
+<li>Réécriture des menus du script.</li>
+<li>Réorganisation des dossiers du script. Maintenant, les trois grandes fonctionnalités peuvent aussi fonctionner indépendemment du script général. Cela augmente grandement la taille de l'archive car il y a beaucoup de doublons d'applications mais le développement est bien plus souple comme ça.</li>
+<li>Le script de blacklist prend maintenant en compte les TITLE ID d'Injectine.</li>
+<li>Beaucoup d'autres choses, de bugs corrigés...</li>
+</ul>
+<h3>V1.51:</h3>
+<ul>
+<li>Suppression des installeurs de Python et Visualc++ car ils ne sont plus requis par le script. Les scripts ont également été modifiés pour s'accorder avec ce changement.</li>
+</ul>
+<h3>V1.50:</h3>
+<ul>
+<li>Mise à jour de Wit en version 3.01a-r7464.</li>
+<li>Mise à jour de Nintendont dans le pack SD.</li>
+<li>Modification du fichier "config.txt" d'Haxchi pour qu'il soit configurer pour lancer le CFW par défaut, Mocha grâce au bouton "A" et le HBL grâce au bouton "B".</li>
+<li>Ajout de quelques informations dans la documentation des packs SD.</li>
+</ul>
+<h3>V1.49:</h3>
+<ul>
+<li>Réintégration de "Wbfs_file" pour corriger le bug en cas d'erreur d'analyse du Title ID par Wit pour les fichiers "wbfs".</li>
+</ul>
+<h3>V1.48:</h3>
+<ul>
+<li>Correction d'importants bugs dans le script de préparation d'une carte SD.</li>
+<li>Correction d'importants bugs dans le script d'injection dans une Wii VC lorsqu'aucune source n'était entrée.</li>
+</ul>
+<h3>V1.47:</h3>
+<ul>
+<li>Création d'un script "preload.bat" qui indique à l'utilisateur comment changer la police de caractères pour en choisir une qui soit compatible avec l'UTF-8. Si celle-ci ne l'est pas, le script s'arrête juste après cette vérification.</li>
+<li>Modification du raccourci de lancement du script pour qu'il pointe sur le nouveau script "preload.bat".</li>
+<li>Déplacement de quelques instructions du script "LogHook.bat" vers le script "preload.bat" pour que le tout soit cohérent.</li>
+<li>Retrait de quelques instructions inutiles dans le script hébergeant la faille navigateur.</li>
+</ul>
+<h3>V1.46:</h3>
+<ul>
+<li>Suppression d'une vérification lors de la copie d'Haxchi ou de CBHC, histoire de faire les choses plus correctement.</li>
+<li>Ajout d'une confirmation lors de la copie de CBHC.</li>
+<li>Modification de quelques messages d'avertissements.</li>
+</ul>
+<h3>V1.45:</h3>
+<ul>
+<li>Ajout de quelques messages supplémentaires.</li>
+<li>Mise à jour de la doc.</li>
+</ul>
+<h3>V1.44:</h3>
+<ul>
+<li>Ajout de l'installeur de Java 8 dans le script d'installation des pré-requis et installation de celui-ci s'il n'est pas installé sur le système.</li>
+<li>L'application se nomme maintenant Shadow256 Ultimate Wii U Hack Script.</li>
+<li>Mise à jour du fichier "readme.txt".</li>
+<li>Création d'une documentation.</li>
+<li>Le fichier "readme.txt" a été renommé "Readme_wiivc_injector_script.txt" et a été déplacé dans le dossier de la documentation.</li>
+<li>Le fichier "changes.txt" a été renommé "changelog.txt" et a été déplacé dans le dossier de la documentation.</li>
+<li>Le fichier décrivant les différents packs pour la mise en place des différents hacks a été renommé "sd_prepare.html" et a été déplacé dans le dossier de la documentation.</li>
+<li>La documentation peut être lancé via le menu de l'écran d'accueil du script.</li>
+</ul>
+<h3>V1.43:</h3>
+<ul>
+<li>Optimisation des fonctions serveur web.</li>
+<li>Optimisation de la préparation des hacks divers.</li>
+<li>Modification dans le script "LogHook.bat" (le script de démarrage) permettant de déterminer automatiquement le dossier de travail. Dans les faits, cela signifie qu'un raccourci peut être créé n'importe où sur l'ordinateur et lancer ce script sans poser de problèmes (vous pouvez aussi créé un raccourci vers le raccourci présent à la racine de l'archive (celui qui lance le script actuellement), cela fonctionnera aussi).</li>
+</ul>
+<h3>V1.42:</h3>
+<ul>
+<li>Ajout d'un pack pour préparer le hack v-wii ainsi que la possibilité de préparer les fichiers d'installation de Haxchi ou de CBHC.</li>
+<li>Ajout d'un nouveau script pour lancer un serveur local contenant l'exploit navigateur pour la version 5.5.0, 5.5.1 et 5.5.2.</li>
+<li>Ajout d'un script très simple pour installer python et les modules nécessaires pour utiliser la fonction de préparation d'une blacklist.</li>
+<li>Indentation correcte du code des scripts.</li>
+<li>Mise à jour du fichier "readme.txt".</li>
+</ul>
+<h3>V1.41:</h3>
+<ul>
+<li>Modification de l'application "Fat32format" pour y ajouter le paramètre (-q) qui permet d'exécuter l'application sans demande de confirmations et modification du paramètre (-?) en (-h). J'ai également ajouté de nouveaux messages, changer l'aide du programme pour y ajouter l'utilisation du nouveau paramètre et déclaré les bibliothèques utilisés de manière explicite. Les sources sont présentent dans les dossiers du script, comme pour la version 1.40.</li>
+<li>Modification du script préparant le hack Wii U pour intégrer le nouveau paramètre de "Fat32format".</li>
+<li>Mise à jour du fichier "readme.txt".</li>
+</ul>
+<h3>V1.40:</h3>
+<ul>
+<li>J'ai recompiler <a target="_new" href="http://www.ridgecrop.demon.co.uk/index.htm?fat32format.htm">Fat32format</a> avec "GCC" pour qu'il demande automatiquement l'élévation de privilèges si cela est nécessaire. J'ai également mis les sources dans le dossier "TOOLS\fat32format\src" et j'ai laissé l'ancienne version pour les curieux.</li>
+<li>Modification du script permettant de préparer le hack Wii U pour l'adapter à ma version de "Fat32format", cela me simplifie grandement les choses et est bien plus simple. J'ai laissé les anciennes méthodes que j'utilisais en commentaires dans le script, pour les curieux également.</li>
+</ul>
+<h3>V1.39:</h3>
+<ul>
+<li>Ajout de la possibilité de ne pas scruber ou trimer les jeux Wii durant le script.</li>
+<li>Suppression de l'application "wbfs_file" car elle n'est plus utilisée.</li>
+<li>Quelques petites optimisations du code.</li>
+<li>Ajout d'un nouveau script permettant de préparer une SD pour le hack Wii U 5.5.1 ou 5.5.2, soyez prudent en l'utilisant et suivez bien les instructions.</li>
+<li>Ajout d'un nouveau script permettant de restaurer toutes les valeurs par défauts (jeux téléchargé par Jnustool, clés, configurations, blacklist et le dossier "SOURCE_FILES" est vidé). En bref, remet le script prêt pour la distribution.</li>
+<li>Quelques modifications mineurs.</li>
+<li>Mise à jour du fichier "readme.txt".</li>
+</ul>
+<h3>V1.38:</h3>
+<ul>
+<li>Essai de l'ajout du support du contrôle parental Wii U (non testé).</li>
+<li>Corrections de bugs.</li>
+</ul>
+<h3>V1.37:</h3>
+<ul>
+<li>Correction d'un bug causé par l'encodage UTF-8 lorsque l'utilisateur choisissait d'utiliser l'interface graphique pour sélectionner un fichier/dossier ayant un chemin contenant des caractères spéciaux (accents et autres).</li>
+</ul>
+<h3>V1.36:</h3>
+<ul>
+<li>Ajout de la possibilité d'utiliser une version auto-boot de Nintendont forçant l'option "Wii U Widescreen" sur "on" et l'option "Widescreen" sur "off". Cela peut être utile pour les jeux utilisant des cheats permettant de passer celui-ci en widescreen.</li>
+<li>Mise à jour de Nintendont avec la dernière version dans le pack SD.</li>
+<li>Corrections de petits bugs.</li>
+</ul>
+<h3>V1.35:</h3>
+<ul>
+<li>Intègre maintenant tous les scripts dans l'application principale. Les scripts sont donc maintenant stockés dans le dossier "TOOLS\Storage".</li>
+<li>Modifications des scripts pour être compatibles avec la nouvelle intégration.</li>
+</ul>
+<h3>V1.34:</h3>
+<ul>
+<li>Ajout de nouvelles vérifications sur les entrées utilisateur.</li>
+<li>Corrections de bugs dans la plupart des scripts et des fonctions.</li>
+</ul>
+<h3>V1.33:</h3>
+<ul>
+<li>Ajout de vérifications lors de la saisie du nom de la sauvegarde par l'utilisateur dans le script "save_configs.bat".</li>
+<li>Corrections de bugs dans le script "restore_configs.bat".</li>
+</ul>
+<h3>V1.32:</h3>
+<ul>
+<li>Utilisation de 7zip pour créer un fichier de sauvegarde dans le script "save_configs.bat" (extension ".wvcis" pour le fichier de sauvegarde).</li>
+<li>Ajout de la possibilité de donner un nom au fichier de sauvegarde et de l'enregistrer dans un dossier particulier dans le script "save_configs.bat".</li>
+<li>Création d'un script "restore_configs.bat" permettant de restaurer un fichier de sauvegarde ".wvcis" créé par le script "save_configs.bat".</li>
+<li>Quelques bugs corrigés dans le script principal.</li>
+<li>Mise à jour du fichier "readme.txt".</li>
+</ul>
+<h3>V1.31:</h3>
+<ul>
+<li>Ajout de la possibilité d'ouvrir une boîte de dialogue de sélection d'un fichier lorsque la valeur "*" (sans les guillemets) est entrée lors d'une demande d'un chemin d'un fichier.</li>
+<li>Correction de bugs.</li>
+</ul>
+<h3>V1.30:</h3>
+<ul>
+<li>Ajout du support pour écrire le nom du jeu sur deux lignes. Chaque ligne ne peut contenir que 32 caractères au maximum et la seconde ligne reste optionnelle.</li>
+<li>Quelques corrections de bugs dans les nouvelles vérifications faites par le script, tant au niveau du script lui-même qu'au niveau des fonctions qu'il appel.</li>
+</ul>
+<h3>V1.29B:</h3>
+<ul>
+<li>Ajout de nouvelles vérifications lors des saisies de l'utilisateur.</li>
+</ul>
+<h3>V1.28B:</h3>
+<ul>
+<li>Conversion des scripts en UTF-8 et utilisation de ce format pendant le script pour les entrées/sorties.</li>
+<li>Implémentation d'une méthode alternative en cas d'erreur d'analyse des fichiers de jeux par Wit. S'il y a une erreur, le jeu sera copié dans le dossier "SOURCE_FILE" du script pour tenter une seconde analyse. Notez que le jeu copié sera automatiquement supprimé du dossier "SOURCE_FILES" à la fin du script. Notez également que cela ne fonctionne pas pour les jeux splités sur plusieurs fichiers. Cette méthode n'est pas franchement très élégante mais c'est la seule technique que j'ai trouvé pour l'instant pour que les chemins avec des accents fonctionnent avec Wit mais par contre, cela augmente assez fortement la détection d'erreurs, si erreur il y a bien sure car sinon ça ne change rien.</li>
+<li>Les parenthèses sont maintenant acceptées dans les chemins des différentes sources.</li>
+<li>Conversion du Wii U Title ID en majuscules s'il est entré manuellement.</li>
+<li>Corrections de bugs dans les différentes fonctions de blacklist du script ainsi que du script "blacklist_wiiu_instaled_titles.bat".</li>
+<li>D'autres corrections de bugs.</li>
+</ul>
+<h3>V1.27B:</h3>
+<ul>
+<li>Utilisation du programme "Convert" du paquet ImageMagick pour convertir les images en début de script. Ce programme prend plus de place sur le disque et est plus lourd que Tga2png mais il peut convertir bien plus de types d'images.</li>
+<li>Le script accepte maintenant tous les formats d'images pouvant être convertis par ImageMagick pour les sources des images. Pour ceux qui souhaite utiliser le dossier "SOURCE_FILES" pour copier leurs fichiers, il suffit de nommer l'image comme avant mais l'extension est libre. Les noms de fichiers peuvent donc être (bootTvTex, iconTex, bootDrcTex et bootLogoTex) et les extensions peuvent être (.png, .tga, .jpg, .pdf, ...) (liste non exhaustive).</li>
+<li>Refonte de la suppression du jeu source lorsque l'utilisateur le demande.</li>
+<li>Optimisation du nettoyage de certains fichiers à la fin du script.</li>
+<li>Suppression de Tga2png car il n'est plus utilisé pendant le script.</li>
+<li>Mise à jour du fichier "readme.txt".</li>
+<li>D'autres corrections de bugs.</li>
+</ul>
+<h3>V1.26B:</h3>
+<ul>
+<li>Ajout de la possibilité de choisir un chemin pour tous les fichiers nécessaires au script (jeu, images, bootsound, fichier cheats pour les jeux Wii et version personnalisée de Nintendont pour l'injection Gamecube). Attention, les chemins avec des accents et caractères spéciaux sont à éviter, surtout pour le chemin du jeu car Wit ne semble pas beaucoup les apprécier ("+, -, [, ], _, (, ), espace" sont es caractères autorisés). Notez que le script peut toujours être utilisé comme avant, c'est-à-dire en copiant les fichiers avec leur nom particulier dans le dossier "SOURCE_FILES" et en choisissant de ne pas entrez les sources manuellement. Si vous choisissez d'entrer les sources manuellement, seul la source du jeu pourra être demandée si tous les autres fichiers se trouvent déjà dans le dossier "SOURCE_FILES" et sinon, seul les fichiers ne s'y trouvant pas seront demandés et aucun d'entre eux n'est obligatoire à renseigner.</li>
+<li>Ajout de vérifications pour supprimer certains fichiers à la fin du script.</li>
+<li>Plusieurs bugs corrigés.</li>
+</ul>
+<h3>V1.25:</h3>
+<ul>
+<li>Ajout du support pour l'injection de fichiers de cheats pour les jeux Wii uniquement. Il faut placer un fichier "game.gct" dans le dossier "SOURCE_FILES" pour que cette fonction s'active. Attention, ceci est très instable et le jeu pourrait ne pas fonctionner correctement et les cheats ne pourront plus être désactivé sur cette version de la chaîne une fois injecté. Notez que si vous le souhaitez, une version intégrant des cheats et une autre version n'en intégrant pas peuvent cohabiter sans problème, pourvu qu'elles n'aient pas le même Wii U Title ID (celui qui est choisi au hasard dans le script ou que vous pouvez définir manuellement juste avant le début du travail d'injection).</li>
+<li>Mise à jour du fichier "readme.txt".</li>
+</ul>
+<h3>V1.24:</h3>
+<ul>
+<li>Ajout d'une méthode alternative si l'empaquetage avec Wit échoue pour les jeux Wii nommé "game.iso". Maintenant, le jeu peut bien être un ciso ou tout autres formats de jeu Wii, cela ne provoquera plus d'erreurs (fichiers wbfs splittés non pris en charge par cette méthode).</li>
+<li>Déplacement des instructions pour supprimer les sources d'un jeu après que Wit ai réussi à empaqueter le jeu.</li>
+</ul>
+<h3>V1.23:</h3>
+<ul>
+<li>Les fichiers "bootTvTex.png" et "iconTex.png" sont devenus des fichiers optionnels. S'ils ne sont pas présent dans le dossier "SOURCES_FILES", une version par défaut de ces fichiers sera copiée du dossier "TOOLS\templates" et ils seront supprimés à la fin du script. Il est à noter que si vous utilisez vos propres sources pour les images ou bootsound, les fichiers ne seront pas supprimés sauf si vous décidez de télécharger les images en ligne et que le jeu est trouvé sur le dépôt, les fichiers "bootTvTex.png" et "iconTex.png" seront supprimés.</li>
+<li>Ajout de la possibilité de télécharger directement les images correspondant au jeu à injecter via <a target="_new" href="https://github.com/cucholix/wiivc-bis/tree/master/">le dépôt de cucholix</a>. Les images sont téléchargées dans le dossier "SOURCE_FILES" et sont supprimées à la fin du script.</li>
+<li>Ajout d'un bootsound par défaut pour l'injection des jeux Gamecube et pour la création automatique d'une chaîne Nintendont, si aucun bootsound n'est présent dans le dossier "SOURCE_FILES". Le bootsound provient du dépôt de cucholix et est localisable via le chemin "TOOLS\templates\GC_bootSound.wav".</li>
+<li>Le Title ID est maintenant récupéré via Wit pour les jeux Gamecube et Wii (ne change pas le title ID de la chaîne Wii U mais est utilisé dans le "meta.xml" et pour d'autres fonctions du script).</li>
+<li>Le jeu Gamecube peut maintenant être nommé "game.iso", le script détectera s'il s'agit d'un jeu Gamecube ou Wii. Pareillement, le second disque peut être nommé "disc2.iso". Vous pouvez même nommé le premier "game.iso" et le second "disc2.gcm" ou encore le premier "game.gcm" et le second "disc2.iso", cela n'a plus d'importance.</li>
+<li>Changement de la façon dont le script faisait son nettoyage de répertoires temporaires après une conversion.</li>
+<li>Changement de la façon dont le script se termine en cas d'erreur. Maintenant, les fichiers temporaires sont nettoyés avant de quitter.</li>
+<li>Ajout de nouvelles vérifications et messages d'erreurs.</li>
+<li>Correction d'un bug qui faisait qu'un wad modifié avec GetExtTypePatcher était supprimé si le choix de supprimer les sources du jeu à injecté était activé. Maintenant, le wad modifié est sauvegardé correctement.</li>
+<li>Mise à jour du Homebrew Launcher du pack SD avec <a target="_new" href="http://www.logic-sunrise.com/news-961102-wii-u-le-hbl-controlable-autrement-quavec-le-gamepad-maj.html">la version qui peut être contrôlée autrement qu'avec le Gamepad</a>.</li>
+<li>Ajout des chaînes du Homebrew Launcher et de Wup Installer GX2 dans le pack SD. Ces chaînes sont à installer avec Wup Installer GX2 et les sig_patches activées, voir le fichier "readme.html" du pack pour plus d'informations.</li>
+<li>Mise à jour du fichier "readme.txt".</li>
+<li>Quelques autres changements mineurs et corrections de bugs.</li>
+</ul>
+<h3>V1.22:</h3>
+<ul>
+<li>Refonte complète du script "blacklist_wiiu_instaled_titles.bat", il n'est plus nécessaire de copier les IDs qu'il a trouvé dans le fichier de blacklist,, tout se fait automatiquement. Il n'est plus nécessaire non plus de modifier le fichier "wupclient.py" pour y modifier l'adresse IP, le script le proposera et le fera tout seul.</li>
+<li>Ajout de la création du fichier de blacklist s'il n'existe pas quand le script d'injection commence.</li>
+<li>Correction de bugs lors de l'application du patch de GetExtTypePatcher pour les jeux Wii.</li>
+<li>Ajout du support pour de nouveaux formats de jeux Wii (.wdf, .wia, .ciso, .wbi). Par exemple, pour un jeu au format "ciso", il faudra nommer le jeu "game.ciso" (voir le fichier "readme.txt" pour plus d'informations).</li>
+<li>Il est maintenant possible de choisir d'utiliser ou non le Gamepad pour tous les types d'injections.</li>
+<li>Mise à jour de la version de WUP Installer dans le pack SD.</li>
+<li>Mise à jour du fichier "readme.txt".</li>
+</ul>
+<h3>V1.21B:</h3>
+<ul>
+<li>Ajout de l'appel de la fonction "exit()" dans le script python appelé dans le script "blacklist_wiiu_instaled_titles.bat".</li>
+<li>Ajout d'un pack de homebrews et de fichiers de configuration pratiques dans le dossier "TOOLS" qui est nommé "sd_wiiu". Vous pouvez donc copier certains éléments de ce dossier sur votre carte SD Wii U (l'arborescence des dossiers est à respectée). Une description des fichiers et homebrews présents dans le pack se trouve dans le fichier "readme.html" à la racine de ce dossier. Peut-être utiliserais-je cela à l'avenir dans mon script mais pour l'instant je ne sais pas trop.</li>
+</ul>
+<h3>V1.20B:</h3>
+<ul>
+<li>Ajout d'un nouveau script nommé "blacklist_wiiu_instaled_titles.bat" qui permet d'utiliser Wupclient pour trouver les jeux déjà installées par le script sur une Wii U. Un fichier "ids_list.txt" est créé et son contenu peut être copier/coller dans le fichier "TOOLS\Storage\blacklist_ids.txt". Attention, ce script nécessite:
+<ul>
+<li>D'avoir <a target="_new" href="https://www.python.org/downloads/">la dernière version de python 2.7</a> d'installé sur l'ordinateur, pas la version 3.x (n'oubliez pas de cocher l'option pour l'inclure au path pendant l'installation).</li>
+<li>D'éditer la ligne 29 du fichier "TOOLS\Wupclient\wupclient.py" et de remplacer l'adresse IP qui s'y trouve par la vôtre (utilisez Ftpiiu pour connaître l'adresse IP de la console).</li>
+<li>De connecter également le ou les disques USB liés à la Wii U si vous en avez (pas ceux de la v-wii).</li>
+<li>De lancer <a target="_new" href="https://github.com/dimok789/mocha/releases">Mocha</a> avec les paramètres par défaut ou un fw.img contenant wupserver, CBHC et le CFW d'Haxchi ne fonctionnent pas avec Wupclient.</li>
+</ul>
+</li>
+<li>Mise à jour du fichier "readme.txt".</li>
+</ul>
+<h3>V1.19B:</h3>
+<ul>
+<li>Ajout d'un fichier pour blacklistée les Title IDs déjà utilisés dans le dossier "TOOLS\Storage" et nommé "blacklist_ids.txt". Sa structure est simple, il y a les quatre chiffres/lettres généré durant le script d'enregistré si la création réussi et il y a un Title ID par ligne sans espace ni rien d'autre. Merci @nimmegil pour la suggestion.</li>
+<li>Adaptation du script pour utiliser le fichier de blacklist des Title IDs.</li>
+<li>Le fichier de script "save_keys.bat" a été renommé en "save_configs.bat".</li>
+<li>Ajout de la sauvegarde du fichier de blacklist des Title IDs au script "save_config.bat".</li>
+<li>Changement dans la création du fichier de configuration des choix par défaut dans le script principal et dans le fichier de script ""del_default_choices.bat". Maintenant, le fichier sera un fichier vide.</li>
+</ul>
+<h3>V1.18B:</h3>
+<ul>
+<li>Correction d'un bug très important qui faisait que la création manuelle d'une Wiivc Chan Booter ne créait que la chaîne OHBC, même si une autre valeur était entrée.</li>
+<li>Ajout de nouvelles vérifications sur certaines variables. Par exemple, pour les questions nécessitant une réponse de type O/N, seul la première lettre est prise en compte.</li>
+</ul>
+<h3>V1.17B:</h3>
+<ul>
+<li>Ajout de la possibilité d'ouvrir la page Gbatemp pour la <a target="_new" href="http://wiki.gbatemp.net/wiki/WiiU_VC_Wii_inject_compatibility_list">liste de compatibilité des jeux Wii avec l'injection</a>.</li>
+<li>Ajout de la possibilité d'ouvrir la page Gbatemp pour <a target="_new" href="https://gbatemp.net/threads/banners-icon-templates-for-wii-vc.483080/">télécharger des templates d'images et de bootsound</a>.</li>
+<li>Ajout d'un nouveau fichier permettant d'enregistrer certains choix pour ne plus les redemander par la suite (cette fonction peut être améliorée selon vos suggestions).</li>
+<li>Ajout de nouveaux messages pendant le script.</li>
+<li>Ajout d'un script nommé "del_default_choices.bat" qui permet de réinitialiser les choix enregistré pendant le script dans le nouveau fichier, les clés ne sont pas touchées par ce script.</li>
+<li>Ajout de la sauvegarde de ce nouveau fichier de sauvegarde des choix dans le script "save_keys.bat".</li>
+</ul>
+<h3>V1.16B:</h3>
+<ul>
+<li>Mise à jour de Nfs2iso2nfs avec la version 0.5.6 de FIX94 qui corrige un bug avec le patch permettant de swaper les boutons ZL/ZR avec L/R (un des boutons n'était pas correctement swapé avant cette version).</li>
+<li>Réécriture du script pour l'adapter au nouveau patch de la Wiimote utilisé dans la nouvelle version de Nfs2iso2nfs.</li>
+<li>Mise à jour du fichier Readme.txt.</li>
+</ul>
+<h3>V1.15B:</h3>
+<ul>
+<li>Réécriture complète de la méthode de patch avec GetExtTypePatcher pour les fichiers wad. La méthode est nettement plus lente mais elle devrait fonctionner quelque soit le wad, s'il est compatible avec ce type de patch bien sure.</li>
+<li>Possibilité de créer simplement une chaîne contenant un forwarder de Nintendont, une chaîne très pratique pour le configurer par exemple. Il faut juste lancer le script sans copier de jeu dans le dossier "SOURCE_FILES" et ne pas accepter la création d'une Wiivc Chan Booter (les images sont toujours requises).</li>
+<li>Ajout d'informations et mise à jour du fichier "readme.txt".</li>
+</ul>
+<h3>V1.14B:</h3>
+<ul>
+<li>Ajout de nouvelles vérifications et de nouveaux messages pour le patch des fichiers wad avec GetExtTypePatcher.</li>
+</ul>
+<h3>V1.13B:</h3>
+<ul>
+<li>Utilisation de la variable global "windir" au lieu du chemin complet pour les outils natifs de Windows (Robocopy, Ping...).</li>
+<li>Correction de nombreux bugs initiés dans la version 1.12B.</li>
+<li>Début d'une tentative pour inclure le résultat de GetExtTypePatcher dans le log général mais cela ne fonctionne pas pour l'instant.</li>
+</ul>
+<h3>V1.12B:</h3>
+<ul>
+<li>Ajout de la trucha sign (fake sign) lors de la reconstruction d'un fichier "wad" si GetExtTypePatcher a trouvé quelque chose à patcher dans ce fichier. Si rien n'a été patché, le "wad" n'est pas reconstruit.</li>
+<li>Ajout de vérifications pour savoir si GetExtTypePatcher a patché quelque chose ou non. Si le patch a réussi, de nouveaux messages seront affichés à la fin du script.</li>
+<li>Création de messages supplémentaires dans le fichier "log.txt".</li>
+<li>Un nouveau fichier de log nommé "getexttypepatcher.txt" est créé pendant le script si GetExtTypePatcher est utilisé. Ce fichier contient les résultats du patch.</li>
+</ul>
+<h3>V1.11B:</h3>
+<ul>
+<li>Ajout d'explications sur le patch "passthrough" lors de l'injection d'une Wiivc_Chan_booter.</li>
+<li>Correction d'un bug qui faisait que le patch "passthrough" n'était pas pris en compte lors de la création d'une Wiivc_Chan_Booter" avec un fichier "game.wad".</li>
+</ul>
+<h3>V1.10B:</h3>
+<ul>
+<li>La ligne que j'avais jugée inutile dans la v1.8B a été remise en place. Cela ne causait pas de bug dans le script mais l'affichage du titre de la fenêtre changeait pendant le script.</li>
+</ul>
+<h3>V1.9B:</h3>
+<ul>
+<li>Correction d'un bug pendant l'injection basée sur un fichier wad.</li>
+</ul>
+<h3>V1.8B:</h3>
+<ul>
+<li>Traduction approximative du script en français, les améliorations sont les bienvenues.</li>
+<li>Suppression d'une ligne inutile.</li>
+</ul>
+<h3>V1.7B:</h3>
+<ul>
+<li>Le script peut maintenant déterminer le Title ID d'un jeu Wii en wbfs.</li>
+<li>Réécriture de quelques instructions pour créer une Wiivc_Chan_Booter.</li>
+<li>Optimisation de l'injection wbfs en supprimant le fichier "SOURCE_FILES\game.iso" créé pendant le script dès que celui-ci n'est plus nécessaire. Cela permet d'optimiser l'espace disque requis pour l'injection d'un jeu en wbfs.</li>
+</ul>
+<h3>V1.6:</h3>
+<ul>
+<li>Meilleurs nettoyage des dossiers résiduels au lancement du script.</li>
+<li>Ajout de la possibilité de patcher le mode vidéo des jeux Wii grâce à Wii-vmc. Ceci peut être utile pour certains jeux pal lancés sur une console ntsc ou inversement et qui donne un écran noir. Il est à noter que tous les jeux ne sont pas concernés, il vaut donc mieux utiliser ces patches en dernier recours.</li>
+<li>Mise à jour du fichier "readme.txt".</li>
+</ul>
+<h3>v1.5:</h3>
+<ul>
+<li>Correction pour utiliser correctement GetExtTypePatcher sur un fichier "game.wad".</li>
+<li>Le script est maintenant officiellement basé sur la bersion 2.2.6 de Wiivc Injector Script.</li>
+</ul>
+<h3>V1.4:</h3>
+<ul>
+<li>Ajout de la possibilité de patcher ou non un fichier "game.wad" avec GetExtTypePatcher. Cela peut être pratique car l'automatisation de l'injection d'une Wiivc_Chan_Booter est complète. Le script ira lire le Title ID contenu dans le fichier "game.wad". La méthode manuelle sans jeux fonctionne toujours.</li>
+<li>Correction de certains bugs et optimisation du script.</li>
+<li>Quelques autres modifications mineurs.</li>
+</ul>
+<h3>V1.3:</h3>
+<ul>
+<li>Mise à jour importante de C2w Patcher en version 1.2 car dans la version 1.1 il y avait une erreur de la part de FIX94. Je conseil donc de mettre à jour cette application si vous utilisez la v1.1, présente dans la version originale de Wiivc Injector Script 2.2.5 (Wiivc Injector Script 2.2.6 corrige cela, et uniquement cela).</li>
+<li>Ajout de la nouvelle option "-iop2x" de C2w Patcher. Attention, cette option n'est pas utilisée actuellement dans les homebrews et peut occasionner des bugs donc elle n'est à activer que si vous savez se que vous faites.</li>
+</ul>
+<h3>V1.1 et V1.2:</h3>
+&nbsp;
+<p>
+Ces mises à jour incluent le patch des wads avec "GetExtTypePatcher" (seul intérêt pour l'instant d'ajouter le support des wiiwares) mais par contre là je ne suis vraiment pas sure de mon coup donc je recommande une extrême prudence avec cette fonction. Le jeu doit être nommé "game.wad" et doit être mis dans le dossier "SOURCE_FILES". Ces mises à jour corrigent également d'autres soucis importants.
+</p>
+&nbsp;
+<h3>V1.0:</h3>
+<ul>
+<li>Nettoyage de plus de dossiers résiduels lors du démarrage du script.</li>
+<li>Le jeu utilisé comme source dans le dossier "SOURCE_FILES" peut être supprimé pendant le script, utile pour ceux qui n'ont pas beaucoup de place sur leur disque dur.</li>
+<li>Ajout des nouveaux patches de FIX94 pour Nfs2iso2nfs.</li>
+<li>Ajout du support de <a target="_new" href="https://github.com/FIX94/GetExtTypePatcher">GetExtTypePatcher</a> de FIX94, seulement pour les jeux en iso ou en wbfs Wii.</li>
+<li>Quelques optimisations du script et possibilité de choisir plus de patches pour l'injection des homebrews.</li>
+<li>Implémentation de <a target="_new" href="https://github.com/FIX94/wiivc_chan_booter">Wiivc Chan Booter</a> de FIX94 pour booter un "wad" installé sur la nand de la v-wii, pratique pour lancer les wiiwares par exemple. Cette fonction se déclenche si aucun fichier de jeu n'est présent dans le dossier "SOURCE_FILES".</li>
+<li>Création d'un script pour sauvegarder les fichiers de configuration de Wiivc Injector Script. C'est un script très limité mais ça peut toujours servir.</li>
+</ul>
+&nbsp;
+<h2>Credit</h2>
+&nbsp;
+<ul>
+<li>Wiivc Injector Script 2.2.6: https://gbatemp.net/threads/release-wiivc-injector-script-gc-wii-homebrew-support.483577/</li>
+<li>Injectiine: https://gbatemp.net/threads/release-injectiine-wii-u-virtual-console-injector.491386/</li>
+<li>7zip 16.04: http://www.7-zip.org/</li>
+<li>c2w_patcher 1.2: FIX94</li>
+<li>CleanRip: https://github.com/emukidid/cleanrip</li>
+<li>caddy 0.10.10 personal: https://caddyserver.com</li>
+<li>fat32format 1.08 (compiled and modified by myself): http://www.ridgecrop.demon.co.uk/index.htm?fat32format.htm</li>
+<li>GetExtTypePatcher 1.1: FIX94</li>
+<li>GNU Win32 tools (Cut, Grep, Head, Tail): http://gnuwin32.sourceforge.net/</li>
+<li>HomeBrew ISO Base: FIX94 & Ploggy</li>
+<li>ImageMagick 7.0.7 (Convert): https://www.imagemagick.org/</li>
+<li>JNUSTool 0.3b: Maschell</li>
+<li>Nintendont Autoboot Forwarder 1.2: FIX94</li>
+<li>nfs2iso2nfs 0.5.6: sabykos, piratesephiroth, FIX94, etc</li>
+<li>NUSPacker: timogus, ihaveamac & FIX94</li>
+<li>pngcheck: Alexander Lehmann, Andreas Dilger, Greg Roelofs</li>
+<li>PNG to TGA 2.6: Easy2Convert Software</li>
+<li>Sharpii 1.7.2: person66</li>
+<li>SoX 14.4.2: cbagwell, robs, & uklauer</li>
+<li>Wiivc_Chan_Booter 1.0: FIX94</li>
+<li>Wii Video Mode Changer 2.2: Waninkoko</li>
+<li>wav2btsnd 0.2: timogus & Zarklord</li>
+<li>wbfs_file 2.6: oggzee & kwiirk</li>
+<li>wfs-extract 0.6.46: https://github.com/koolkdev/wfslib/releases/</li>
+<li>Wget 19.4: https://eternallybored.org/misc/wget/</li>
+<li>Wiimms ISO Tools 3.01a-r7464: Wiimms</li>
+<li>WSTRT 1.54a: Wiimms</li>
+<li>Wupclient and Wupserver: smealum for initial relise and so many people to thank</li>
+<li>Wii and Wii U homebrews: Too many people to thank.</li>
+<li>And everybody else I might have forgotten.</li>
+</ul>
