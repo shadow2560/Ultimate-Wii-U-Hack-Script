@@ -185,13 +185,13 @@ set /p copy_wiiu_pack=Souhaitez-vous copier le pack pour le hack Wii U? (O/n): >
 IF /i NOT "%copy_wiiu_pack%"=="" set copy_wiiu_pack=%copy_wiiu_pack:~0,1%
 set /p copy_vwii_pack=Souhaitez-vous copier le pack pour le hack V-Wii? (O/n): >con
 IF /i NOT "%copy_vwii_pack%"=="" set copy_vwii_pack=%copy_vwii_pack:~0,1%
-set /p copy_tiramisu=Souhaitez-vous copier l'environement Tiramisu? (O/n): >con
+set /p copy_tiramisu=Souhaitez-vous copier les environement ^(Tiramisu et Aroma^)? (O/n): >con
 IF /i NOT "%copy_tiramisu%"=="" set copy_tiramisu=%copy_tiramisu:~0,1%
 IF /i "%copy_tiramisu%"=="o" (
 	set propose_launch_doc=O
-	echo ATTENTION: Veuillez bien vous renseigner sur la procédure à effectuer avant d'installer ou d'utiliser l'environement Tiramisu. >con
+	echo ATTENTION: Veuillez bien vous renseigner sur la procédure à effectuer avant d'installer ou d'utiliser un environement. >con
 	echo Vous pourez trouver un lien vers un tutoriel dans la documentation, il vous sera proposé de l'ouvrir après la copie des fichiers. >con
-	echo ATTENTION: Si CBHC ou Haxchi sont déjà installé sur votre console, il est fortement recommandé ^(obligatoire dans le cas de CBHC^) de les désinstaller via leurs installeurs avant d'exécuter l'installation de l'environement de développement Tiramisu. >con
+	echo ATTENTION: Si CBHC ou Haxchi sont déjà installé sur votre console, il est fortement recommandé ^(obligatoire dans le cas de CBHC^) de les désinstaller via leurs installeurs avant d'exécuter l'installation d'un environement de développement. >con
 	pause >con
 	goto:pass_haxchi_cbhc_choices
 )
@@ -285,7 +285,7 @@ IF /i "%copy_cbhc%"=="o" (
 )
 echo Copie terminée. >con
 IF "%propose_launch_doc%"=="O" (
-	echo Vous avez choisi de copier Tiramisu, Haxchi ou CBHC. Si vous ne savez pas comment les utilisés ensuite, il est fortement conseillé de lancer la documentation. >con
+	echo Vous avez choisi de copier les environements, Haxchi ou CBHC. Si vous ne savez pas comment les utilisés ensuite, il est fortement conseillé de lancer la documentation. >con
 	set /p launch_doc=Souhaitez-vous lancer la documentation? (O/n^): >con
 )
 IF NOT "%launch_doc%"=="" set launch_doc=%launch_doc:~0,1%

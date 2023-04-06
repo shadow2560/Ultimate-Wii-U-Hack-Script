@@ -56,7 +56,7 @@ Tutoriels de référence:
 <li>wup_installer_gx2_channel: La chaîne de Wup Installer GX2.</li>
 </ul>
 &nbsp;
-<h2>Contenu de l'environement Tiramisu</h2>
+<h2>Contenu des environements (Tiramisu et Aroma)</h2>
 &nbsp;
 <p>
 Tutoriel de référence:
@@ -73,7 +73,7 @@ Tutoriel de référence:
 <li>controllers: Ce dossier contient des fichiers de configuration permettant de faire en sorte que certaines manettes soient reconnues par Nintendont.</li>
 <li>games: Le dossier pour la mise en place de la structure des jeux Gamecube.</li>
 <li>install: Le dossier dans lequel on copiera les jeux, DLCs, mises à jour et chaînes à installer via l'homebrew Wup Installer GX2.</li>
-<li>wiiu: Ce dossier contient un dossier apps qui est le dossier contenant les homebrews Wii U. Ce dossier "wiiu"  contient également les dossiers/fichiers nécessaires à la mise en place de l'environement Tiramisu.</li>
+<li>wiiu: Ce dossier contient un dossier apps qui est le dossier contenant les homebrews Wii U. Ce dossier "wiiu"  contient également les dossiers/fichiers nécessaires à la mise en place des environements.</li>
 <li>nincfg.bin: Un fichier de configuration pour Nintendont. Les options de widescreen sont activées, les cartes mémoires sont émulées et une carte mémoire de 251 blocks est créée par jeu. Les autres options sont par défaut.</li>
 <li>recovery_menu: Permet de lancer le Recovery Menu lié à l'exploit Udpih.</li>
 </ul>
@@ -93,7 +93,7 @@ Tutoriel de référence:
 </ul>
 &nbsp;
 <p>
-Note importante: Les homebrews "mocha" et "sign_patcher" seront automatiquement supprimés car inutils dans l'environement Tiramisu.
+Note importante: Les homebrews "mocha" et "sign_patcher" seront automatiquement supprimés car inutils dans les environements.
 </p>
 &nbsp;
 <h3>Les homebrews Wii présents dans le dossier "apps":</h3>
