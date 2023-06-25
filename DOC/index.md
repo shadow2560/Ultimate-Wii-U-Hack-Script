@@ -72,6 +72,10 @@ Cette documentation ne couvrira pas les différents tutoriels d'utilisations de 
 &nbsp;
 <h2>Changelog</h2>
 &nbsp;
+<h3>V1.92:</h3>
+<ul>
+<li>Ajout de <a target="_blank" href="https://github.com/Nightkingale/Wii-U-Time-Sync/">Wii_U_Time_Sync</a> et de <a target="_blank" href="https://github.com/Fangal-Airbag/wup-installer-gx2/">Wup_installer_gx2</a> à Aromma.</li>
+</ul>
 <h3>V1.91:</h3>
 <ul>
 <li>Ajout de l'environement <a target="_blank" href="https://github.com/wiiu-env/Aroma">Aroma</a>, il intègre le plugin <a target="_blank" href="https://github.com/wiiu-env/ftpiiu_plugin">Ftpiiu_plugin</a> et <a target="_blank" href="https://github.com/WiiDatabase/Padcon-Plugin-Mod">Padcon</a>.</li>
