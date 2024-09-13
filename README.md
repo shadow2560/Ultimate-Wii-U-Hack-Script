@@ -6,6 +6,8 @@ La licence GPL V3 s'applique sur les scripts batch . Pour le reste, les licences
 
 La documentation se trouve <a target="_blank" href="https://github.com/shadow2560/Ultimate-Wii-U-Hack-Script/tree/master/DOC/index.md">sur cette page</a>.
 
+<a href="https://codeload.github.com/shadow2560/Ultimate-Wii-U-Hack-Script/zip/refs/heads/master">Cliqez ici pour télécharger la dernière version du projet.</a>
+
 ## Fonctionnalités
 
 ### Wiivc Injector Script
