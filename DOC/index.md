@@ -72,6 +72,10 @@ Cette documentation ne couvrira pas les différents tutoriels d'utilisations de 
 &nbsp;
 <h2>Changelog</h2>
 &nbsp;
+<h3>V1.94:</h3>
+<ul>
+<li>Ajout de <a target="_blank" href="https://github.com/Lynx64/WiiVCLaunch">WiiVCLaunch</a>.</li>
+</ul>
 <h3>V1.93:</h3>
 <ul>
 <li>Ajout de <a target="_blank" href="https://github.com/V10lator/NUSspli/">NUSspli</a>.</li>
