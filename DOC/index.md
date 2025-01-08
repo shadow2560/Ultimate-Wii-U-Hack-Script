@@ -72,6 +72,14 @@ Cette documentation ne couvrira pas les différents tutoriels d'utilisations de 
 &nbsp;
 <h2>Changelog</h2>
 &nbsp;
+<h3>V1.96:</h3>
+<ul>
+<li>Remplacement de SaveMiiMod par <a target="_blank" href="https://github.com/Xpl0itU/savemii">la version de w3irDv</a>.</li>
+</ul>
+<h3>V1.95:</h3>
+<ul>
+<li>Mise à jour de Bloopair en version 1.0.2.</li>
+</ul>
 <h3>V1.94:</h3>
 <ul>
 <li>Ajout de <a target="_blank" href="https://github.com/Lynx64/WiiVCLaunch">WiiVCLaunch</a>.</li>
