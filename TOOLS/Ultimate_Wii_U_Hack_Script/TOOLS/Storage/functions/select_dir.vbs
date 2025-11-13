@@ -37,7 +37,7 @@ Set exec = shell.Exec(cmd)
 out = exec.StdOut.ReadAll
 out = Trim(out)
 
-' Write UTF-8 with BOM
+' Write UTF-8
 Dim s1, s2
 Set s1 = CreateObject("ADODB.Stream")
 s1.Type = 2
@@ -72,7 +72,6 @@ Sub DecodeBase64ToFile(b64, target)
 End Sub
 
 Function CleanBase64(s)
-    ' Supprime tous les CR/LF et caractères invalides
     Dim re
     Set re = New RegExp
     re.Pattern = "[^A-Za-z0-9+/=]"
