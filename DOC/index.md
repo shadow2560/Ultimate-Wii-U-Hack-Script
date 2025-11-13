@@ -72,6 +72,14 @@ Cette documentation ne couvrira pas les différents tutoriels d'utilisations de 
 &nbsp;
 <h2>Changelog</h2>
 &nbsp;
+<h3>V1.98:</h3>
+<ul>
+<li>Mise à jour de la fonction permettant de sélectionner des fichiers/dossiers devenue incompatible avec les récentes versions de Windows.</li>
+</ul>
+<h3>V1.97:</h3>
+<ul>
+<li>Mise à jour de Bloopair en version 1.0.3.</li>
+</ul>
 <h3>V1.96:</h3>
 <ul>
 <li>Remplacement de SaveMiiMod par <a target="_blank" href="https://github.com/Xpl0itU/savemii">la version de w3irDv</a>.</li>
